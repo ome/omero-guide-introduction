@@ -8,3 +8,4 @@ Contents:
 
    data-management
    annotate
+   search-omero
