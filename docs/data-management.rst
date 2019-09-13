@@ -1,13 +1,13 @@
-Data management and cooperation in OMERO
-========================================
+Data management and cooperation
+===============================
 
 In this document, we introduce the basic concepts of data management,
 such as browsing, navigating to others’ data, and changing the display
 of the images in OMERO. The example here uses OMERO.web, but majority of
 the features described here are also present in OMERO.insight.
 
-Description:
-------------
+**Description**
+---------------
 
 We will show:
 
@@ -19,15 +19,15 @@ We will show:
 
 -  How to adjust the rendering settings of yours and other users’ images from the Preview panel
 
-**Setup:**
-----------
+**Setup**
+---------
 
 OMERO.server has been installed and provisioned using the Ansible software, the corresponding playbook
 
 -  https://github.com/ome/prod-playbooks/blob/master/omero/training-server/playbook.yml
 
-**Resources:**
---------------
+**Resources**
+-------------
 
 -  All data have been pre-imported. For more details, go to: https://github.com/ome/training-repos/blob/master/data.md
 
@@ -37,11 +37,11 @@ OMERO.server has been installed and provisioned using the Ansible software, the 
 
 -  The cooperation in OMERO is described in https://docs.openmicroscopy.org/latest/omero/sysadmins/server-permissions.html
 
-**Step-by-Step:**
------------------
+**Step-by-Step**
+----------------
 
 **Data layout and ownership, usernames**
-----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 All images for this workshop have been pre-imported for you into the
 OMERO.server. For training purposes, we prepared 50 users on the
@@ -63,51 +63,51 @@ see in the top-right corner of the OMERO webclient after you log in with your lo
 In the OMERO webclient the default view shows only your own images.
 
 Browsing and rendering
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
-1. In your web browser, go to the server address provided.
+#. In your web browser, go to the server address provided.
 
-2. Log in using the username and password provided.
+#. Log in using the username and password provided.
 
-3. OMERO offers various levels of permissions for groups and users. Depending on the permissions level of each group, a given user might be able to view, annotate or edit data belonging to other users. Permissions are managed by users with admin privileges. For this training session, we will work in a “Read-Annotate” group. This implies that users can view and annotate each other’s data but cannot delete other people’s data.
+#. OMERO offers various levels of permissions for groups and users. Depending on the permissions level of each group, a given user might be able to view, annotate or edit data belonging to other users. Permissions are managed by users with admin privileges. For this training session, we will work in a “Read-Annotate” group. This implies that users can view and annotate each other’s data but cannot delete other people’s data.
 
-4. To see other people’s data, click on the Lab1 group name in the top-left corner of the webclient. Then use the menu to select the name of the user whose data you wish to see.
+#. To see other people’s data, click on the Lab1 group name in the top-left corner of the webclient. Then use the menu to select the name of the user whose data you wish to see.
 
-..
+   \ |image0|
 
-   |image0|
+#.  You can browse ‘folders’ in the left-hand pane: Image folders are called Datasets and they are within Projects.
 
-5.  You can browse ‘folders’ in the left-hand pane: Image folders are called Datasets and they are within Projects.
+#.  When a Dataset is selected, Image thumbnails are shown in the centre panel.\ |image1|
 
-6.  When a Dataset is selected, Image thumbnails are shown in the centre panel.\ |image1|
+#.  These represent imported Images. The original Images are stored on the server and the generated thumbnails allow us to browse them.
 
-7.  These represent imported Images. The original Images are stored on the server and the generated thumbnails allow us to browse them.
+#.  Bio-Formats,\ https://www.openmicroscopy.org/bio-formats/\ , is used to read the pixel-data and metadata from over 150 different image formats, including multi-z timelapse images with many channels, they are referenced as 5D Images. Large pathology and medical images are also supported.
 
-8.  Bio-Formats,\ https://www.openmicroscopy.org/bio-formats/\ , is used to read the pixel-data and metadata from over 150 different image formats, including multi-z timelapse images with many channels, they are referenced as 5D Images. Large pathology and medical images are also supported.
+#.  Select an Image. In the right-hand pane, metadata read by Bio-Formats and stored in a relational database is displayed:
 
-9.  Select an Image. In the right-hand pane, metadata read by Bio-Formats and stored in a relational database is displayed:
+    - core metadata in the General tab
 
-    a. core metadata in the General tab
+    - additional metadata in the Acquisition tab. All the metadata read by Bio-Formats can be downloaded at any time.
 
-    b. additional metadata in the Acquisition tab. All the metadata read by Bio-Formats can be downloaded at any time.
+#. In the Preview tab in the right-hand panel, you can also view the Image.
 
-10. In the Preview tab in the right-hand panel, you can also view the Image.
+#. For multi-plane images, sliders allow you to move through Z or Time dimensions.
 
-11. For multi-plane images, sliders allow you to move through Z or Time dimensions.
+#. Viewing Images DOES NOT download the whole Image to the client. Only the viewed Image plane is rendered from the original Image file on the server and sent back to the client.
 
-12. Viewing Images DOES NOT download the whole Image to the client. Only the viewed Image plane is rendered from the original Image file on the server and sent back to the client.
+#. You can adjust the rendering settings for each channel e.g. turn on/off the channels, adjust color settings, look-up tables, etc..
 
-13. You can adjust the rendering settings for each channel e.g. turn on/off the channels, adjust color settings, look-up tables, etc..
+#. The rendering settings can be saved to the server. This NEVER changes the original Image data and can be reverted at any time.
 
-14. The rendering settings can be saved to the server. This NEVER changes the original Image data and can be reverted at any time.
+#. The rendering settings can also be copied and pasted between Images. To modify the rendering settings in batch, click on the ``Save to All`` button to apply the same settings to, for example, all Images in a given Dataset.
 
-15. The rendering settings can also be copied and pasted between Images. To modify the rendering settings in batch, click on the Save to All button to apply the same settings to, for example, all Images in a given Dataset.
+#. You can use the settings which other users saved on your Images and apply them for your own Image. These settings are highlighted as thumbnails in the lower part of the Preview pane.
+  
+   \ |image2|
 
-16. You can use the settings which other users saved on your Images and apply them for your own Image. These settings are highlighted as thumbnails in the lower part of the Preview pane. .\ |image2|
+#. Your own settings are highlighted in blue.
 
-17. Your own settings are highlighted in blue.
-
-18. You can revert to the original settings for an Image or Dataset. For example, using the context menu for a Dataset in the tree, select Rendering Settings > Set Imported and Save.
+#. You can revert to the original settings for an Image or Dataset. For example, using the context menu for a Dataset in the tree, select ``Rendering Settings > Set Imported and Save``.
 
 .. |image0| image:: images/management1.png
    :width: 4.15104in
