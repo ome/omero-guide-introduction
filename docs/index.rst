@@ -12,4 +12,4 @@ Contents:
    data-management
    annotate
    search-omero
-   groups-users-adm
+   group-user-management
