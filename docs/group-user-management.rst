@@ -1,12 +1,45 @@
 Administrate Groups and Users
 =============================
 
+Description:
+------------
+
+This chapter will show how to manage groups and users using graphical interface in OMERO.web and command line interface. Most of following tasks below can only be done by users with some
+administrator privileges. We will show:
+
+- How to manage groups, creating and editing a new/existing group
+- How to manage users, creating and editing a new/existing user
+
+**Resources:**
+--------------
+
+-  Documentation:
+
+   -  https://docs.openmicroscopy.org/latest/omero/sysadmins/server-permissions.html
+
+   -  https://docs.openmicroscopy.org/latest/omero/sysadmins/restricted-admins.html
+
+   -  https://docs.openmicroscopy.org/omero/latest/sysadmins/cli/usergroup.html
+
+
+Setup:
+------
+
+No setup needed for OMERO.web administration panel (see Web Interface chapter below) except working OMERO.web.
+
+**Command Line interface installation**
+
+The installation instructions can be
+found at \ https://docs.openmicroscopy.org/latest/omero/users/cli/installation.html\ .
+
+
+**Step-by-step:**
+-----------------
+
 Administrate using the Web Interface
 ------------------------------------
 
-Most of following tasks below can only be done by users with some
-administrator privileges. The following steps will be done by the
-trainer. Below are some useful links to know more about permissions and administrator privileges:
+Below are some useful links to know more about permissions and administrator privileges:
 
 -  https://docs.openmicroscopy.org/latest/omero/sysadmins/server-permissions.html
 
@@ -89,133 +122,89 @@ trainer. Below are some useful links to know more about permissions and administ
 Administrate using the Command Line Interface
 ---------------------------------------------
 
-1. Managing Groups:
+#.  Managing Groups:
 
-   a. By default when creating a group, its permissions level is set to private. To create a new read-annotate group Lab1, run:
+    a. By default when creating a group, its permissions level is set to private. To create a new read-annotate group Lab1, run:
 
-..
+       ``$ omero group add Lab1 --type=read-annotate``
 
-   $ bin/omero group add Lab1 --type=read-annotate
+       or
 
-   Or
+       ``$ omero group add Lab1 --perms='rwra--'``
 
-   $ bin/omero group add Lab1 --perms='rwra--'
+    b. To list all the groups and save the output for example in a CSV file:
 
-b. To list all the groups and save the output for example in a CSV file:
+       ``$ omero group list --style csv > groups.csv``
 
-..
+    c. To add an existing user user-1 to the Lab1 group and make him/her a group owner (the option ``--as-owner`` is not needed when adding a member), run:
 
-   $ bin/omero group list --style csv > groups.csv
+       ``$ omero group adduser user-1 --name=Lab1 --as-owner``
 
-c. To add an existing user user-1 to the Lab1 group and make him/her a group owner (the option --as-owner is not needed when adding a member), run:
+    d. Let’s add trainer-1 as an owner of the group too:
 
-..
+       ``$ omero group adduser trainer-1 --name=Lab1 --as-owner``
 
-   $ bin/omero group adduser user-1 --name=Lab1 --as-owner
+    e. To remove user-1 from the list of owners (user-1 will still be a member of the Lab1 group):
 
-d. Let’s add trainer-1 as an owner of the group too:
+       ``$ omero user leavegroup Lab1 --name=user-1 --as-owner``
 
-..
+    f. To remove user-1 from the Lab1 group, run:
 
-   $ bin/omero group adduser trainer-1 --name=Lab1 --as-owner
+       ``$ omero group removeuser user-1 --name=Lab1``
 
-e. To remove user-1 from the list of owners (user-1 will still be a
-      member of the Lab1 group):
+    g. To edit the Lab1 group, first determine its ID:
 
-..
+       ``$ omero group info --group-name Lab1``
 
-   $ bin/omero user leavegroup Lab1 --name=user-1 --as-owner
+       ``id \| name \| perms \| ldap \| # of owners \| # of members``
 
-f. To remove user-1 from the Lab1 group, run:
+       ``-----+-------+--------+-------+-------------+--------------``
 
-..
+       ``653 \| Lab1 \| rwra-- \| False \| 0 \| 0``
 
-   $ bin/omero group removeuser user-1 --name=Lab1
+    h. Change the group name to ``LabN``:
 
-g. To edit the Lab1 group:
+       ``$ omero obj update ExperimenterGroup:653 name='LabN'``
 
-   i. First determine its ID:
+    i. Let’s reset the name back to ``Lab1`` to simplify the rest of the workflow
 
-..
+    j.  Change groups permissions to read-write:
 
-   $ bin/omero group info --group-name Lab1
-
-   id \| name \| perms \| ldap \| # of owners \| # of members
-
-   -----+-------+--------+-------+-------------+--------------
-
-   653 \| Lab1 \| rwra-- \| False \| 0 \| 0
-
-ii. Change its name to "LabN":
-
-$ bin/omero obj update ExperimenterGroup:653 name='LabN'
-
-iii. Let’s reset the name back to “Lab1” to simplify the rest of the workflow
-
-iv.  Change groups permissions to read-write:
-
-$ bin/omero group perms --perms='rwrw--' --name='Lab1'
+        ``$ omero group perms --perms='rwrw--' --name='Lab1'``
 
 2. Managing Users:
 
-   h. Create a new user user-lab1 and add the user to the Lab1 group:
+   a. Create a new user with login name lpasteur and at the same time add this user (with first and last name ``Louis Pasteur``) to the Lab1 group:
 
-..
+      ``$ omero user add lpasteur Louis Pasteur --group-name Lab1``
 
-   $ bin/omero user add user-lab1 Jan Purkyne --group-name Lab1
+   b. Let’s now add the user to another group:
 
-i. Let’s now add the user to another group:
+      ``$ omero user joingroup Lab1 --name=lpasteur``
 
-..
+   c. To edit the user and for example add an email address, first determine the user’s ID:
 
-   $ bin/omero user joingroup Lab1 --name=user-lab1
+      ``$ omero user info --user-name lpasteur``
 
-j. To edit the user and for example add an email address
+   d. Add an email address (supposing the ID of the user were ``123``):
 
-   v. First determine the user’s ID:
+      ``$ omero obj update Experimenter:123 email='lpasteur@demo.co.uk'``
 
-..
+   e. Make a user inactive. User cannot be deleted but it is possible to prevent a user from logging in. For that we need to remove the user from the user group (internal OMERO group).
 
-   $ bin/omero user info --user-name user-lab1
+      ``$ omero user leavegroup user --name=lpasteur``
 
-vi. Add an email address:
+   f. To reactivate the user:
 
-..
+      ``$ omero user joingroup user --name=lpasteur``
 
-   $ bin/omero obj update Experimenter:123
-   email=j\ \ `purkyne@demo.co.uk <mailto:lpasteur@demo.co.uk>`__
+   g. LDAP authentication. It is possible to convert non LDAP users to LDAP authentication using the command ``omero ldap setdn``. When using LDAP as an authentication backend, users when they log in will be added to the internal OMERO group called default unless they have already been added to a given group. To add a user before they have ever logged in to OMERO, first create the user (example user name is ``enoether``).
 
-k. Make a user inactive:
+      ``$ omero ldap create enoether``
 
-   vii. User cannot be deleted but it is possible to prevent a user from logging in. For that we need to remove the user from the user group (internal OMERO group).
+      Then add the user to the Lab1 group
 
-..
-
-   $ bin/omero user leavegroup user --name=user-lab1
-
-l. To reactivate the user:
-
-..
-
-   $ bin/omero user joingroup user --name=user-lab1
-
-m. LDAP authentication:
-
-   viii. It is possible to convert non LDAP users to LDAP authentication using the command bin/omero ldap setdn
-
-   ix.   When using LDAP as an authentication backend, users when they log in will be added to the internal OMERO group called default unless they have already been added to a given group. To add a user before they have ever logged in to OMERO, run:
-
-         1. First create the user
-
-..
-
-   $ bin/omero ldap create enoether
-
-2. Then add the user to the Lab1 group
-
-..
-
-   $ bin/omero group adduser enoether --name=Lab1
+      ``$ omero group adduser enoether --name=Lab1``
 
 .. |image0| image:: images/groupsusersadm1.png
    :width: 0.75in
