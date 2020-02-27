@@ -21,9 +21,11 @@ We will show:
 
 -  How to filter thumbnails in the central pane of OMERO.web for
 
-   -  Ratings
-
    -  Tags
+
+   -  Key-Value Pairs
+
+   -  Ratings
 
 **Setup**
 ---------
