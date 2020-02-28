@@ -61,9 +61,9 @@ We will show:
 
       |image1|
 
-   - The Key-Value Pairs allow you to add lab-book-like additional metadata for the Image. These Key-Value Pairs are also specifically searchable. [LINK to Search sister doc] 
+   - The Key-Value Pairs allow you to add lab-book-like additional metadata for the Image. These Key-Value Pairs are also specifically searchable. See :doc:`search-omero`.
 
-#. It is also possible to add Comment, Attachment and Rating to selected Images.
+#. It is also possible to add Comment, Attachment and Rating to selected Images in the right-hand pane in General tab.
 
 #. Filter using annotations
 
