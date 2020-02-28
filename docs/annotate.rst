@@ -55,7 +55,7 @@ We will show:
 
 #. Let’s now add Key-Value Pairs
 
-   - Select an Image from the Dataset and in the right-hand General tab, click the harmonica Key-Value Pairs. 
+   - Select an Image from the Dataset and in the right-hand pane in General tab, click the harmonica Key-Value Pairs.
    
       |image0|
 
