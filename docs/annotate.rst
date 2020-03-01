@@ -55,15 +55,15 @@ We will show:
 
 #. Let’s now add Key-Value Pairs
 
-   - Select an Image from the Dataset and in the right-hand General tab, click the harmonica Key-Value Pairs. 
+   - Select an Image from the Dataset and in the right-hand pane in General tab, click the harmonica Key-Value Pairs.
    
       |image0|
 
       |image1|
 
-   - The Key-Value Pairs allow you to add lab-book-like additional metadata for the Image. These Key-Value Pairs are also specifically searchable. [LINK to Search sister doc] 
+   - The Key-Value Pairs allow you to add lab-book-like additional metadata for the Image. These Key-Value Pairs are also specifically searchable. See :doc:`search-omero`.
 
-#. It is also possible to add Comment, Attachment and Rating to selected Images.
+#. It is also possible to add Comment, Attachment and Rating to selected Images in the right-hand pane in General tab.
 
 #. Filter using annotations
 
