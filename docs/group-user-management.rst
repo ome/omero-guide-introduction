@@ -83,7 +83,7 @@ Below are some useful links to know more about permissions and administrator pri
 
    g. How to identify users:
 
-      viii. Users with administrators privileges with \ |image2|
+      viii. Users with administrator privileges with \ |image2|
 
       ix.   Active users with\ |image3|
 
