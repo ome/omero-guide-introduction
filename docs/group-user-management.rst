@@ -105,7 +105,7 @@ Below are some useful links to know more about permissions and administrator pri
 
       xvi.   Click on the Pencil button |image6|
 
-      xvii.  You can add or remove the user to/from a group. Modify the roles etc..
+      xvii.  You can add or remove the user to/from a group, modify the roles etc..
 
       xviii. Click Save
 
