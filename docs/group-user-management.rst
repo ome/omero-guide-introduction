@@ -69,7 +69,7 @@ Below are some useful links to know more about permissions and administrator pri
 
       iv.  Click on the Pencil button |image1|
 
-      v.   You can add or remove members or group’s owners. Change permissions etc..
+      v.   You can add or remove members or group’s owners, change permissions etc..
 
       vi.  Make sure that the data owned by a user is moved or transferred to another user before removing the user from the group
 
