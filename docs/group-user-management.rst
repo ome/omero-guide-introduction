@@ -47,7 +47,7 @@ Below are some useful links to know more about permissions and administrator pri
 
 1. In your web browser, go to the server address provided.
 
-2. Login using the username and password provided.
+2. Log in using the username and password provided.
 
 3. In the top toolbar, click the Admin button |image0|\ .
 
