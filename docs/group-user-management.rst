@@ -117,7 +117,7 @@ Below are some useful links to know more about permissions and administrator pri
 
    l. In the dropdown menu, click on User settings
 
-   m. In the dialog that pops up, the user can change password, default group i.e. the group he/she will log in by default etc.
+   m. In the dialog that pops up, the user can change password, default group i.e. the group he/she will log in to by default etc.
 
 Administrate using the Command Line Interface
 ---------------------------------------------
