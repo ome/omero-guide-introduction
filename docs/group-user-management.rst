@@ -109,7 +109,7 @@ Below are some useful links to know more about permissions and administrator pri
 
       xviii. Click Save
 
-   j. Creating an administrator privileges allow to give some limited rights to some trusted users e.g. to allow a facility manager to import data for other users. It is currently preferable to create users with such role via the Web Interface.
+   j. Creating an administrator with privileges allows to give some limited rights to some trusted users e.g. to allow a facility manager to import data for other users. It is currently preferable to create users with such roles via the Web Interface.
 
 6. Note that a user can manage his/her settings.
 
