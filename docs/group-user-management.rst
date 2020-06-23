@@ -168,7 +168,7 @@ Administrate using the Command Line Interface
 
     i. Let’s reset the name back to ``Lab1`` to simplify the rest of the workflow
 
-    j.  Change groups permissions to read-write:
+    j.  Change the group's permissions to read-write:
 
         ``$ omero group perms --perms='rwrw--' --name='Lab1'``
 
