@@ -4,7 +4,7 @@ Administrate Groups and Users
 Description:
 ------------
 
-This chapter will show how to manage groups and users using graphical interface in OMERO.web and command line interface. Most of following tasks below can only be done by users with some
+This chapter will show how to manage groups and users using the graphical interface in OMERO.web and the command-line interface. Most of following tasks below can only be done by users with some
 administrator privileges. We will show:
 
 - How to manage groups, creating and editing a new/existing group
