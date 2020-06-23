@@ -198,7 +198,7 @@ Administrate using the Command Line Interface
 
       ``$ omero user joingroup user --name=lpasteur``
 
-   g. LDAP authentication. It is possible to convert non LDAP users to LDAP authentication using the command ``omero ldap setdn``. When using LDAP as an authentication backend, users when they log in will be added to the internal OMERO group called default unless they have already been added to a given group. To add a user before they have ever logged in to OMERO, first create the user (example user name is ``enoether``).
+   g. LDAP authentication. It is possible to convert non-LDAP users to LDAP authentication using the command ``omero ldap setdn``. When using LDAP as an authentication backend, users when they log in will be added to the internal OMERO group called default unless they have already been added to a given group. To add a user before they have ever logged in to OMERO, first create the user (example user name is ``enoether``).
 
       ``$ omero ldap create enoether``
 
