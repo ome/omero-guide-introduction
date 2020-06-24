@@ -41,9 +41,9 @@ Administrate using the Web Interface
 
 Below are some useful links to know more about permissions and administrator privileges:
 
--  https://docs.openmicroscopy.org/latest/omero/sysadmins/server-permissions.html
+#. Log in using the username and password provided.
 
--  https://docs.openmicroscopy.org/latest/omero/sysadmins/restricted-admins.html
+#. In the top toolbar, click the Admin button |image0|\ .
 
 1. In your web browser, go to the server address provided.
 
