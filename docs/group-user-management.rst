@@ -66,6 +66,8 @@ Administrate using the Web Interface
 
 #. Click ``Save``.
 
+#. The new group will be shown in the list of Groups.
+
 #. To edit a Group, click on the ``Pencil`` button |image1|.
 
 #. You can add or remove members or group’s owners or change group permissions.
