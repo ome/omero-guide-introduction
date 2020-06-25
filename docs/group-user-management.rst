@@ -70,7 +70,7 @@ Administrate using the Web Interface
 
 #. You can add or remove members or group’s owners or change group permissions.
 
-#. Before removing a user from a group, it is preferable to move their data to another group or transfer ownership of their data to another user. Having a data owned by someone who is not a member of your group is not desirable.
+#. Before removing a user from a group, it is preferable to move their data to another group or transfer ownership of their data to another user. Having a data owned by someone who is not a member of the group is not desirable.
 
 #. Click ``Save``.
 
