@@ -55,70 +55,70 @@ Administrate using the Web Interface
 
 #. Log in using the username and password provided.
 
-#. In the top toolbar, click the Admin button |image0|\ . Note that the Admin button is only available for users with certain privileges (administrators and administrators with restricted privileges). If you are a user or a group owner, navigate to the section "Web Interface: Users change their own settings" below.
+#. In the top toolbar, click the ``Admin`` button |image0|\ . Note that the ``Admin`` button is only available for users with certain privileges (administrators and administrators with restricted privileges). If you are a user or a group owner, navigate to the section ``Web Interface: Users change their own settings`` below.
 
 *Web Interface: Managing Groups*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Click on the Groups tab. You can search for groups if desired
+#. Click on the ``Groups`` tab. You can search for groups if desired
 
-#. To create a new Group, click on the Add new Group button. Note that the Name and Permissions fields are mandatory.
+#. To create a new Group, click on the ``Add new Group`` button. Note that the ``Name`` and ``Permissions`` fields are mandatory.
 
-#. Click Save.
+#. Click ``Save``.
 
-#. To edit a Group, click on the Pencil button |image1|.
+#. To edit a Group, click on the ``Pencil`` button |image1|.
 
 #. You can add or remove members or group’s owners or change group permissions. Make sure that the data owned by a user is moved or transferred to another user before removing the user from the group. Having a data owned by someone who is not a member of your group is not desirable.
 
-#. Click Save.
+#. Click ``Save``.
 
 *Web Interface: Managing Users*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Click on the Users tab
+#. Click on the ``Users`` tab
 
 #. You can search for users if you wish.
 
 #. OMERO.web denotes the user categories using small helpful icons.
 
-   - Users with administrator privileges have a tools icon \ |image2|.
+   - Users with administrator privileges have a ``tools`` icon \ |image2|.
 
-   - Active users have an icon with blue circle \ |image3|.
+   - Active users have an icon with ``blue circle`` \ |image3|.
    
-   - Inactive users have a lock icon |image4|.
+   - Inactive users have a ``lock`` icon |image4|.
 
-   - LDAP users have a red hexagon |image5|.
+   - LDAP users have a ``red hexagon`` |image5|.
 
-#. To create a new User, click on the Add new User button.
+#. To create a new user, click on the ``Add new User button``.
 
 #. Mandatory fields are highlighted in red.
 
 #. You can select the role of the user.
 
-#. Click Save
+#. Click ``Save``.
 
-#. To edit a User, click on the Pencil button |image6| to the right of the line with the name of the user. You can add or remove the user to/from a group or modify the roles. Creating an administrator with privileges allows to give some limited rights to some trusted users e.g. to allow a facility manager to import data for other users. It is currently preferable to create users with such roles via the Web Interface.
+#. To edit a User, click on the ``Pencil`` button |image6| to the right of the line with the name of the user. You can add or remove the user to/from a group or modify the roles. Creating an administrator with restricted privileges allows to give some limited rights to some trusted users e.g. to allow a facility manager to import data for other users. It is currently preferable to create users with such roles via the Web Interface.
 
-#. Click Save
+#. Click ``Save``.
 
 *Web Interface: Users change their own settings*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Note that these features are not limited to administrators, any user can change their settings in the manner described here. Furthermore, this is the preferred way for Group Owners to manage their groups.
 
-#. In OMERO.web, click in the top-right corner of the webclient, click on your name, then, in the dropdown menu, click on User settings.
+#. In OMERO.web, click in the top-right corner of the webclient, click on your name, then, in the dropdown menu, click on ``User settings``.
 
    |image7|
 
 #. In the interface that appears, you can change your password and default group. Default group is the group you log in to by default when logging to OMERO. Your data in your default group is what you typically see immediately after loggging in for example to OMERO.web, whereas your data in your other (non-default) groups have to be explicitly navigated to.
 
-#. For group owners only: You can now navigate to the group(s) you own by clicking onto "My Groups" tab.
+#. For group owners only: You can now navigate to the group(s) you own by clicking onto ``My Groups`` tab.
 
    |image8|
 
-#. Identify the group you want to edit in your group list and click on Edit button. 
+#. Identify the group you want to edit in your group list and click on ``Edit`` button. 
 
-#. You can now add or remove group members, add members as group owners (a group can have many owners, besides youself).  When removing users from the group, make sure that the data owned by a user is moved or transferred to another user before removing the user from the group.
+#. You can now add or remove group members, add members as group owners (a group can have many owners, besides youself). When removing users from the group, make sure that the data owned by a user is moved or transferred to another user before removing the user from the group.
 
 #. You can also change the permissions level of your group. Note though that this is an action which needs careful thinking, especially if you are going from more permissive group types towards less permissive ones.
 
@@ -132,7 +132,7 @@ Further, the CLI offers an environment in which custom bash scripts for user/gro
 *Command Line: Managing Groups*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. By default when creating a group, its permissions level is set to private. To create a new read-annotate group ``Lab1``, run::
+#. By default when creating a group, its permissions level is set to ``private``. To create a new read-annotate group ``Lab1``, run::
 
      $ omero group add Lab1 --type=read-annotate
 
@@ -191,7 +191,7 @@ Further, the CLI offers an environment in which custom bash scripts for user/gro
 
 #. Let us now add the user to another group::
 
-     $ omero user joingroup Lab1 --name=lpasteur
+     $ omero user joingroup Lab2 --name=lpasteur
 
 #. To edit the user and for example add an email address, first determine the user’s ID::
 
