@@ -6,42 +6,40 @@ such as browsing, navigating to others’ data, and changing the display
 of the images in OMERO. The example here uses OMERO.web, but majority of
 the features described here are also present in OMERO.insight.
 
-**Description**
----------------
+Description
+-----------
 
 We will show:
 
--  How to browse data in OMERO.web, navigating to yours and other users’ images
+-  How to browse data in OMERO.web, navigating to yours and other users’ images.
 
--  How to use the basic layout of OMERO.web
+-  How to use the basic layout of OMERO.web.
 
--  How to use the Preview panel
+-  How to use the Preview panel.
 
--  How to adjust the rendering settings of yours and other users’ images from the Preview panel
+-  How to adjust the rendering settings of yours and other users’ images from the Preview panel.
 
-**Setup**
+Setup
+-----
+
+OMERO.server has been installed and provisioned using an `Ansible playbook <https://github.com/ome/prod-playbooks/blob/master/omero/training-server/playbook.yml>`_.
+
+Resources
 ---------
 
-OMERO.server has been installed and provisioned using the Ansible software, the corresponding playbook
+-  All data have been pre-imported. For more details, look at `data.md <https://github.com/ome/training-repos/blob/master/data.md>`_.
 
--  https://github.com/ome/prod-playbooks/blob/master/omero/training-server/playbook.yml
+-  To import images and metadata, scripts were used. For more details, check the `maintenance scripts <https://github.com/ome/training-scripts/tree/master/maintenance>`_.
 
-**Resources**
--------------
+-  For import of images, we use `in_place_import_as.sh <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/in_place_import_as.sh>`_.
 
--  All data have been pre-imported. For more details, go to: https://github.com/ome/training-repos/blob/master/data.md
+-  The cooperation in OMERO is described in `Groups and permissions system <https://docs.openmicroscopy.org/latest/omero/sysadmins/server-permissions.html>`_.
 
--  To import images and metadata, scripts were used. For more details, go to: https://github.com/ome/training-scripts/tree/master/maintenance
+Step-by-Step
+------------
 
--  For import of images, the main script used was: https://github.com/ome/training-scripts/blob/master/maintenance/scripts/in_place_import_as.sh
-
--  The cooperation in OMERO is described in https://docs.openmicroscopy.org/latest/omero/sysadmins/server-permissions.html
-
-**Step-by-Step**
-----------------
-
-**Data layout and ownership, usernames**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Data layout and ownership, usernames
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 All images for this workshop have been pre-imported for you into the
 OMERO.server. For training purposes, we prepared 50 users on the
@@ -81,7 +79,7 @@ Browsing and rendering
 
 #.  These represent imported Images. The original Images are stored on the server and the generated thumbnails allow us to browse them.
 
-#.  Bio-Formats,\ https://www.openmicroscopy.org/bio-formats/\ , is used to read the pixel-data and metadata from over 150 different image formats, including multi-z timelapse images with many channels, they are referenced as 5D Images. Large pathology and medical images are also supported.
+#.  `Bio-Formats <https://www.openmicroscopy.org/bio-formats/>`_ is used to read the pixel-data and metadata from over 150 different image formats, including multi-z timelapse images with many channels, they are referenced as 5D Images. Large pathology and medical images are also supported.
 
 #.  Select an Image. In the right-hand pane, metadata read by Bio-Formats and stored in a relational database is displayed:
 
