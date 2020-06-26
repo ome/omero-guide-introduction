@@ -1,8 +1,8 @@
 Administrate Groups and Users
 =============================
 
-Description:
-------------
+Description
+-----------
 
 This chapter will show how to manage groups and users using the graphical interface in OMERO.web and the command-line interface. Most of following tasks below can only be done by users with some
 administrator privileges. We will show:
@@ -10,8 +10,8 @@ administrator privileges. We will show:
 - How to manage groups, creating and editing a new/existing group
 - How to manage users, creating and editing a new/existing user
 
-Resources:
-----------
+Resources
+---------
 
 -  Documentation:
 
@@ -21,32 +21,32 @@ Resources:
 
    -  https://docs.openmicroscopy.org/omero/latest/sysadmins/cli/usergroup.html
 
-   -  https://docs.openmicroscopy.org/omero/5.6.1/sysadmins/server-ldap.html
+   -  https://docs.openmicroscopy.org/omero/latest/sysadmins/server-ldap.html
 
-   -  https://docs.openmicroscopy.org/omero/5.6.1/developers/Server/Ldap.html?highlight=ldap
+   -  https://docs.openmicroscopy.org/omero/latest/developers/Server/Ldap.html?highlight=ldap
 
 
 -  Script for Command Line User/Group management
 
-   - https://github.com/ome/training-scripts/blob/master/maintenance/scripts/create_groups_users.sh
+   - `create_groups_users.sh <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/create_groups_users.sh>`_
 
 -  File defining the User/Group setup used by the script
 
-   - https://github.com/ome/training-scripts/blob/master/maintenance/scripts/create_groups_users_setup
+   - `create_groups_users_setup <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/create_groups_users_setup>`_
 
-Setup:
-------
+Setup
+-----
 
 No setup needed for OMERO.web administration panel (see Web Interface chapter below) except working OMERO.web.
 
 **Command Line interface installation**
 
 The installation instructions can be
-found at \ https://docs.openmicroscopy.org/latest/omero/users/cli/installation.html\ .
+found at `CLI installation <https://docs.openmicroscopy.org/latest/omero/users/cli/installation.html>`_.
 
 
-Step-by-step:
--------------
+Step-by-step
+------------
 
 Administrate using the Web Interface
 ------------------------------------
@@ -116,7 +116,7 @@ Administrate using the Web Interface
 
 #. In the interface that appears, you can change your password and default group. Default group is the group you log in to by default when logging to OMERO. Your data in your default group is what you typically see immediately after loggging in for example to OMERO.web, whereas your data in your other (non-default) groups have to be explicitly navigated to.
 
-#. For group owners only: You can now navigate to the group(s) you own by clicking onto ``My Groups`` tab.
+#. **For group owners only**: You can now navigate to the group(s) you own by clicking onto ``My Groups`` tab.
 
    |image8|
 
@@ -131,7 +131,7 @@ Administrate using the Command Line Interface (CLI)
 
 Typically, the administration of Groups and Users in OMERO is done in OMERO.web (see section above), as it is more user friendly. The Command Line Interface (CLI) cannot offer the easy quick overview, filtering and searching and intiutively named buttons and tabs. For creation of administrators with restricted privileges, there are several key features missing from the CLI which are present in OMERO.web. 
 Nevertheless, some features for handling LDAP users are implemented only in CLI. 
-Further, the CLI offers an environment in which custom bash scripts for user/group creation and maintenance can be executed. One example of such script can be taken from https://github.com/ome/training-scripts/blob/master/maintenance/scripts/create_groups_users.sh. The script consumes a file https://github.com/ome/training-scripts/blob/master/maintenance/scripts/create_groups_users_setup in which a certain user-group setup is defined.
+Further, the CLI offers an environment in which custom bash scripts for user/group creation and maintenance can be executed. One example of such script can be taken from `create_groups_users.sh <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/create_groups_users.sh>`_. The script consumes a file `create_groups_users_setup <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/create_groups_users_setup>`_ in which a certain user-group setup is defined.
 
 *Command Line: Managing Groups*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -160,7 +160,7 @@ Further, the CLI offers an environment in which custom bash scripts for user/gro
 
      $ omero user leavegroup Lab1 --name=user-1 --as-owner
 
-#. Note that the previous command when run without the ``--as-owner`` flag would remove the ``user-1`` from the group completely. Thus, it is an alternative to the following command:
+#. Note that the previous command when run without the ``--as-owner`` flag would remove the ``user-1`` from the group completely. Thus, it is an alternative to the following command.
 
 #. To remove ``user-1`` from the ``Lab1`` group, you can also run::
 
@@ -189,7 +189,7 @@ Further, the CLI offers an environment in which custom bash scripts for user/gro
 *Command Line: Managing Users*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Create a new user with login name lpasteur and at the same time add this user (with first and last name ``Louis Pasteur``) to the ``Lab1`` group::
+#. Create a new user with login name ``lpasteur`` and at the same time add this user (with first and last name ``Louis Pasteur``) to the ``Lab1`` group::
 
      $ omero user add lpasteur Louis Pasteur --group-name Lab1
 
@@ -201,7 +201,7 @@ Further, the CLI offers an environment in which custom bash scripts for user/gro
 
      $ omero user info --user-name lpasteur
 
-#. Add an email address (supposing the ID of the user were ``123``)::
+#. Add an email address (supposing the ID of the user is ``123``)::
 
      $ omero obj update Experimenter:123 email='lpasteur@demo.co.uk'
 
