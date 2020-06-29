@@ -160,7 +160,7 @@ If you are an owner of the data, you can move the data between the groups you ar
 
 #. Check both lists. Please read the note above about which objects are typically not included and reconsider the ``Move`` action again. The ``not included`` objects will not be linked to the ``Moved`` objects anymore if you go ahead with the move, the linkage will be lost.
 
-#. In case you are not happy with the ``Move`` action to go ahead, select a target Dataset or Project or create a new one and click ``OK``.
+#. In case you are happy with the ``Move`` action to go ahead, select a target Dataset or Project or create a new one and click ``OK``.
 
 Move data between groups: administrators
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
