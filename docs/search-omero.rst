@@ -34,25 +34,25 @@ Step-by-Step
 
 #.  Connect using the provided credentials
 
-#.  Enter mitomycin-A into the search box in the top right corner of the webclient |image1|
+#.  Enter ``mitomycin-A`` into the search box in the top right corner of the webclient |image1|
 
-#.  Press Enter.
+#.  Press ``Enter``.
 
 #.  The search results will show any objects e.g. Images or Datasets, which have anywhere the string mitomycin-A.
 
 #.  Several images should be found, from two different datasets.
 
-#.  Refine the search now for only Key-Value Pairs which have the key mitomycin-A and value 0mM by entering mitomycin-A:0mM into the search box and pressing Enter.
+#.  Refine the search now for only Key-Value Pairs which have the key ``mitomycin-A`` and value ``0mM`` by entering ``mitomycin-A:0mM`` into the search box and pressing ``Enter``.
 
 #.  Now you should find only 21 images.
 
-#.  Click on the "Advanced search" tab in the search results.
+#.  Click on the ``Advanced search`` tab in the search results.
 
-#. Enter mitomycin-A:0mM AND name:VRAQ which will narrow down your previous search for mitomycin-A:0mM to objects which also have VRAQ in their name.
+#. Enter ``mitomycin-A:0mM AND name:VRAQ`` which will narrow down your previous search for ``mitomycin-A:0mM`` to objects which also have ``VRAQ`` in their name.
 
 #. You should see 5 results now.
 
-#. Enter ``mitomycin-A:0mM AND NOT name:VRAQ`` which will reject all objects which have VRAQ in their name and find only the ones which are named differently.
+#. Enter ``mitomycin-A:0mM AND NOT name:VRAQ`` which will reject all objects which have ``VRAQ`` in their name and find only the ones which are named differently.
 
 #. You should see 16 results now.
 
