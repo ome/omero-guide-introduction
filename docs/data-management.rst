@@ -128,7 +128,7 @@ Move data between groups
 
 In OMERO, ``Users`` are organized in ``Groups``. The ``Groups`` allow a level of viewing and cooperation between the members of the group which can be adjusted by changing the permissions level on that group. A ``User`` can be a member and have their data in one or more ``Groups``. Thus it is sometimes necessary to move the data between groups. This action can be done by the owners of the data themselves or by an administrator or an administrator with restricted privileges.
 
-Note that caution has to be taken in case the data are linked to other users containers (``Datasets``, ``Projects``). If you move only the contents of those containers (``Datasets`` or ``Images``) and not the containers themselves (``Projects`` or ``Datasets``), the links between such containers and the ``Images`` or ``Datasets`` which are moved will be deleted.
+Note that caution has to be taken in case the data are linked to other users' containers (``Datasets``, ``Projects``). If you move only the contents of those containers (``Datasets`` or ``Images``) and not the containers themselves (``Projects`` or ``Datasets``), the links between such containers and the ``Images`` or ``Datasets`` which are moved will be deleted.
 
 Further, if any objects are moved, the links to any annotations (such as ``Tags`` or attached ``File annotations``) linked to these objects will be severed in case these annotations belong to others or in case these annotations belong to you but are also linked to some other objects in the original group which are not being moved.
 
