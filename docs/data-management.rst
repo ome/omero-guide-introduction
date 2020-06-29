@@ -162,7 +162,7 @@ The administrators can move the data to any group, not only to the group where t
 
 Typically an administrator works on behalf of other users in a group where the administrator is not a member. For these cases, some features of OMERO.web help to facilitate the moving of data for others (note that these features are not present in the CLI).
 
-#. Navigate to the data of a user in a group where you are not a member of.
+#. Navigate to the data of a user in a group that you are not a member of.
 
 #. Select the data in the left-hand tree.
 
