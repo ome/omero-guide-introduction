@@ -93,7 +93,7 @@ Browsing and rendering
 
 #.  `Bio-Formats <https://www.openmicroscopy.org/bio-formats/>`_ is used to read the pixel-data and metadata from over 150 different image formats, including multi-z timelapse images with many channels, they are referenced as 5D Images. Large pathology and medical images are also supported.
 
-#.  For HCS data, the layout of the OMERO.web is a bit different. The HCS data are usually organized in following manner: ``Images`` are contained in ``Wells``, ``Wells`` are contained in ``Plates`` and ``Plates`` are organized in ``Screens``. The screenshot below shows the typical layout of a ``Plate`` in OMERO.web, where the ``Wells`` are organized in rows and columns. One ``Well`` is selected in central pane and it contains 4 ``Images`` whose thumbnails are displayed below the central pane. The bottom-left corner shows positions of the images inside that ``Well``.
+#.  For HCS data, the layout of the OMERO.web is a bit different. The HCS data are usually organized in following manner: ``Images`` are contained in ``Wells``, ``Wells`` are contained in ``Plates`` and ``Plates`` are organized in ``Screens``. A ``Plate`` may or may not contain several ``Runs``. The screenshot below shows the typical layout of a ``Plate`` in OMERO.web, where the ``Wells`` are organized in rows and columns. The ``Plate`` contains one ``Run``. One ``Well`` is selected in central pane and it contains 4 ``Images`` whose thumbnails are displayed below the central pane. The bottom-left corner shows positions of the images (called ``Fields`` in this context) inside that ``Well``.
 
     |image3|
 
