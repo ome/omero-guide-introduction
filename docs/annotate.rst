@@ -51,7 +51,7 @@ Step-by-step
 
    - Choose the existing Metaphase from the list of Tags (to filter, type above the list).
 
-   - Click > to move it to the right column, then click ``OK``.
+   - Click ``>`` to move it to the right column, then click ``OK``.
 
 #. Let’s now add Key-Value Pairs
 
@@ -63,11 +63,11 @@ Step-by-step
 
    - The Key-Value Pairs allow you to add lab-book-like additional metadata for the Image. These Key-Value Pairs are also specifically searchable. See :doc:`search-omero`.
 
-#. It is also possible to add Comment, Attachment and Rating to selected Images in the right-hand pane in General tab.
+#. It is also possible to add Comment, Attachment and Rating to selected Images in the right-hand pane in the ``General`` tab.
 
 #. Filter using annotations
 
-   - Images can also be filtered by Name, Tag, Key-Value pairs or Rating in the centre pane, using the Add filter chooser above the thumbnails.
+   - Images can also be filtered by Name, Tag, Key-Value pairs or Rating in the centre pane, using the ``Add filter`` chooser above the thumbnails.
 
    - For example, choose ``Tag`` and then select ``Metaphase`` from the list of Tags to show the images we tagged earlier.
 
@@ -76,7 +76,7 @@ Step-by-step
 
       |image3|
 
-   - Review the filtered Images, choose a favourite Image and under the Rating section in the right-hand pane, click on the 5th star to add a rating of 5
+   - Review the filtered Images, choose a favourite Image and under the ``Ratings`` section in the right-hand pane, click on the 5th star to add a rating of 5
    
       |image2|
 
