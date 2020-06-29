@@ -21,11 +21,6 @@ Resources
 
    -  https://docs.openmicroscopy.org/omero/latest/sysadmins/cli/usergroup.html
 
-   -  https://docs.openmicroscopy.org/omero/latest/sysadmins/server-ldap.html
-
-   -  https://docs.openmicroscopy.org/omero/latest/developers/Server/Ldap.html?highlight=ldap
-
-
 -  Script for Command Line User/Group management
 
    - `create_groups_users.sh <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/create_groups_users.sh>`_
@@ -129,8 +124,8 @@ Administrate using the Web Interface
 Administrate using the Command Line Interface (CLI)
 ---------------------------------------------------
 
-Typically, the administration of Groups and Users in OMERO is done in OMERO.web (see section above), as it is more user friendly. The Command Line Interface (CLI) cannot offer the easy quick overview, filtering and searching and intiutively named buttons and tabs. For creation of administrators with restricted privileges, there are several key features missing from the CLI which are present in OMERO.web. 
-Nevertheless, some features for handling LDAP users are implemented only in CLI. 
+Typically, the administration of Groups and Users in OMERO is done in OMERO.web (see section above), as it is more user friendly. The Command Line Interface (CLI) cannot offer the easy quick overview, filtering and searching and intuitively named buttons and tabs. For creation of administrators with restricted privileges, there are several key features missing from the CLI which are present in OMERO.web. 
+Nevertheless, some features for handling LDAP users are implemented only in the CLI. 
 Further, the CLI offers an environment in which custom bash scripts for user/group creation and maintenance can be executed. One example of such script can be taken from `create_groups_users.sh <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/create_groups_users.sh>`_. The script consumes a file `create_groups_users_setup <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/create_groups_users_setup>`_ in which a certain user-group setup is defined.
 
 *Command Line: Managing Groups*
@@ -216,7 +211,8 @@ Further, the CLI offers an environment in which custom bash scripts for user/gro
 *Command Line: Managing LDAP Users*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If LDAP authentication is configured on your OMERO.server, the OMERO.server synchronizes the user list with an LDAP server, thus enabling an easy user creation and maintenance. It is possible to convert non-LDAP OMERO users to LDAP authentication using the command ``omero ldap setdn``. See further information in the links under the Resources section of this guide.
+If LDAP authentication is configured on your OMERO.server, the OMERO.server synchronizes the user list with an LDAP server, thus enabling an easy user creation and maintenance. It is possible to convert non-LDAP OMERO users to LDAP authentication using the command ``omero ldap setdn``. See further information in the links under the Resources section of this guide. See `LDAP authentication
+<https://docs.openmicroscopy.org/omero/latest/sysadmins/server-ldap.html>`_ and `LDAP plugin design <https://docs.openmicroscopy.org/omero/5.6.1/developers/Server/Ldap.html>`_.
 
 Typically, it is impractical to synchronize the OMERO groups with LDAP groups. In such case, the OMERO.server can be configured in such a way that LDAP users when they first log in to OMERO will be added to a specific private OMERO group (let us call this group ``My Data``). This situation is further explored in the example below.
 
