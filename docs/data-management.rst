@@ -36,24 +36,21 @@ Resources
 
 -  All data have been pre-imported. For more details, look at `data.md <https://github.com/ome/training-repos/blob/master/data.md>`_.
 
--  For the HCS data screenshot, the IDR data http://idr.openmicroscopy.org/webclient/?show=well-1420370 were used.
+-  For the HCS data screenshot, the IDR data https://idr.openmicroscopy.org/webclient/?show=run-5403 were used.
 
--  To import images and metadata, scripts were used. For more details, check the `maintenance scripts <https://github.com/ome/training-scripts/tree/master/maintenance>`_.
+-  To import images and metadata, see the `maintenance scripts <https://github.com/ome/training-scripts/tree/master/maintenance>`_ for more details.
 
 -  For import of images, we use `in_place_import_as.sh <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/in_place_import_as.sh>`_.
 
 -  The cooperation in OMERO is described in `Groups and permissions system <https://docs.openmicroscopy.org/latest/omero/sysadmins/server-permissions.html>`_.
 
--  To move data between groups using the Command Line Interface see `CLI Moving Objects between Groups <https://docs.openmicroscopy.org/omero/latest/users/cli/chgrp.html>`_.
-
-
 Step-by-Step
 ------------
 
-Data layout and ownership, usernames
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Data layout and ownership, usernames (when running a workshop)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-All images for this workshop have been pre-imported for you into the
+All images have been pre-imported into the
 OMERO.server. For training purposes, we prepared 50 users on the
 OMERO.server. Each of these 50 users has their own set of images. These
 sets consist of images of the same name, size, shape, form and quality
@@ -79,9 +76,9 @@ Browsing and rendering
 
 #. Log in using the username and password provided.
 
-#. OMERO offers various levels of permissions for groups and users. Depending on the permissions level of each group, a given user might be able to view, annotate or edit data belonging to other users. Permissions are managed by users with admin privileges. For this training session, we will work in a “Read-Annotate” group. This implies that users can view and annotate each other’s data but cannot delete other people’s data.
+#. OMERO offers various levels of permissions for groups and users. Depending on the permissions level of each group, a given user might be able to view, annotate or edit data belonging to other users. Permissions are managed by users with admin privileges. To highlight some of the collaborative aspects of OMERO, we will use a “Read-Annotate” group. This implies that users **can** view and annotate each other’s data but **cannot** delete other people’s data.
 
-#. To see other people’s data, click on the (for example``Lab1``) group name in the top-left corner of the webclient. Note that in case you are in a differently named group, the name in the top left corner will accordingly reflect this. Then use the menu to select the name of the group you wish to browse and then the user inside that group whose data you wish to see.
+#. To see other people’s data, click on the (for example ``Lab1``) group name in the top-left corner of the webclient. Note that in case you are in a differently named group, the name in the top left corner will accordingly reflect this. Then use the menu to select the name of the group you wish to browse and then the user inside that group whose data you wish to see.
 
    \ |image0|
 
@@ -93,25 +90,35 @@ Browsing and rendering
 
 #.  `Bio-Formats <https://www.openmicroscopy.org/bio-formats/>`_ is used to read the pixel-data and metadata from over 150 different image formats, including multi-z timelapse images with many channels, they are referenced as 5D Images. Large pathology and medical images are also supported.
 
-#.  For HCS data, the layout of the OMERO.web is a bit different. The HCS data are usually organized in following manner: ``Images`` are contained in ``Wells``, ``Wells`` are contained in ``Plates`` and ``Plates`` are organized in ``Screens``. A ``Plate`` may or may not contain several ``Runs``. The screenshot below shows the typical layout of a ``Plate`` in OMERO.web, where the ``Wells`` are organized in rows and columns. The ``Plate`` contains one ``Run``. One ``Well`` is selected in central pane and it contains 4 ``Images`` whose thumbnails are displayed below the central pane. The bottom-left corner shows positions of the images (called ``Fields`` in this context) inside that ``Well``.
+#.  For HCS data, the layout of the OMERO.web is a bit different. The HCS data are usually organized in following manner:
+
+    #. ``Images`` are contained in ``Wells``
+
+    #. ``Wells`` are contained in ``Plates``
+
+    #. ``Plates`` are organized in ``Screens``.
+
+    #. A ``Plate`` may or may not contain several ``Runs``. 
+
+    #. The screenshot below shows the typical layout of a ``Plate`` in OMERO.web, where the ``Wells`` are organized in rows and columns. The ``Plate`` contains one ``Run``. One ``Well`` is selected in the central pane and it contains 4 ``Images`` whose thumbnails are displayed below the central pane. The bottom-left corner shows the positions of the images (called ``Fields`` in this context) inside that ``Well``.
 
     |image3|
 
 #.  Select an Image. In the right-hand pane, metadata read by Bio-Formats and stored in a relational database is displayed:
 
-    - core metadata in the General tab
+    - core metadata in the ``General`` tab
 
-    - additional metadata in the Acquisition tab. All the metadata read by Bio-Formats can be downloaded at any time.
+    - additional metadata in the ``Acquisition`` tab. All the metadata read by Bio-Formats can be downloaded at any time.
 
 #. In the ``Preview`` tab in the right-hand panel, you can also view the Image.
 
 #. For multi-plane images, sliders allow you to move through Z or Time dimensions.
 
-#. Viewing Images DOES NOT download the whole Image to the client. Only the viewed Image plane is rendered from the original Image file on the server and sent back to the client.
+#. Viewing Images **does not** download the whole Image to the client. Only the viewed Image plane is rendered from the original Image file on the server and sent back to the OMERO.web client.
 
 #. You can adjust the rendering settings for each channel e.g. turn on/off the channels, adjust color settings, look-up tables, etc..
 
-#. The rendering settings can be saved to the server. This NEVER changes the original Image data and can be reverted at any time.
+#. The rendering settings can be saved to the server. This **never** changes the original Image data and can be reverted at any time.
 
 #. The rendering settings can also be copied and pasted between Images. To modify the rendering settings in batch, click on the ``Save to All`` button to apply the same settings to, for example, all Images in a given Dataset.
 
@@ -132,7 +139,7 @@ Note that caution has to be taken in case the data are linked to other users' co
 
 Further, if any objects are moved, the links to any annotations (such as ``Tags`` or attached ``File annotations``) linked to these objects will be severed in case these annotations belong to others or in case these annotations belong to you but are also linked to some other objects in the original group which are not being moved.
 
-Note that except for using OMERO.web described below, it might be worth in some situations to consider moving data between groups using Command Line Interface. See the Resources section for a link to detailed description of the CLI workflow.
+Note that except for using OMERO.web described below, it might be worth in some situations to consider moving data between groups using the Command Line Interface see `CLI Moving Objects between Groups <https://docs.openmicroscopy.org/omero/latest/users/cli/chgrp.html>`_.
 
 Move data between groups: owners of data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -160,7 +167,7 @@ Move data between groups: administrators
 
 The administrators can move the data to any group, not only to the group where the owner of the data is a member. Note though that it is not desirable to create a situation where the data belong to someone who is not a member of the group where the data reside.
 
-Typically an administrator works on behalf of other users in a group where the administrator is not a member. For these cases, some features of OMERO.web help to facilitate the moving of data for others (note that these features are not present in the CLI).
+Typically an administrator works on behalf of other users in a group where the administrator is not a member. For these cases, some features of OMERO.web help to facilitate the moving of data for others (note that these features are not yet available in the Command Line Interface).
 
 #. Navigate to the data of a user in a group that you are not a member of.
 
