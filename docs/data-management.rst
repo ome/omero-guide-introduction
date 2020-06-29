@@ -20,7 +20,7 @@ We will show:
 
 -  How to use the Preview panel.
 
--  How to adjust the rendering settings of yours and other users’ images from the Preview panel.
+-  How to adjust the rendering settings of your and other users’ images from the Preview panel.
 
 -  How to move the data between groups if you are data owner.
 
