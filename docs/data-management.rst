@@ -16,7 +16,7 @@ We will show:
 
 -  How to use the basic layout of OMERO.web for images organized in Projects and Datasets.
 
--  How to use OMERO.web for viewing of Hight Content Screening (HCS) data.
+-  How to use OMERO.web for viewing of High-Content Screening (HCS) data.
 
 -  How to use the Preview panel.
 
