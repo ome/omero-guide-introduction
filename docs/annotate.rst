@@ -4,12 +4,12 @@ Annotate Data and Filter using Annotations
 In this section, we show various types of annotations supported in
 OMERO and how to use them.
 
-**Description**
----------------
+Description
+-----------
 
 We will show:
 
--  How to annotate Images, Datasets and Projects with
+-  How to annotate Images, Datasets and Projects with:
 
    -  Tags
 
@@ -19,7 +19,7 @@ We will show:
 
    -  Ratings
 
--  How to filter thumbnails in the central pane of OMERO.web for
+-  How to filter thumbnails in the central pane of OMERO.web for:
 
    -  Tags
 
@@ -27,17 +27,17 @@ We will show:
 
    -  Ratings
 
-**Setup**
----------
+Setup
+-----
 
--  The data used are from the siRNAi-HeLa folder available at \ https://downloads.openmicroscopy.org/images/DV/siRNAi-HeLa/
+-  The data used are from the `siRNAi-HeLa <https://downloads.openmicroscopy.org/images/DV/siRNAi-HeLa>`_ folder.
 
--  The tags and ratings were added manually, then propagated for all users on the OMERO.server using the script \ https://github.com/ome/training-scripts/blob/master/maintenance/scripts/copy_tags_ratings.py
+-  The tags and ratings were added manually, then propagated for all users on the OMERO.server using the script `copy_tags_ratings.py <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/copy_tags_ratings.py>`_.
 
--  The Key-Value Pairs were added to the images in the siRNAi-HeLa Dataset for all users using the script \ https://github.com/ome/training-scripts/blob/master/maintenance/scripts/key_value_pairs.py
+-  The Key-Value Pairs were added to the images in the siRNAi-HeLa Dataset for all users using the script `key_value_pairs.py <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/key_value_pairs.py>`_.
 
-**Step-by-step**
-----------------
+Step-by-step
+------------
 
 #. Open a browser and enter the provided URL
 
@@ -47,15 +47,15 @@ We will show:
 
    - Select one or more Images in the siRNAi-HeLa Dataset of cells which appear to be in metaphase.
 
-   - Choose the Tag option in the right-hand General tab and click [ + ] to launch the Tag dialog.
+   - Choose the Tag option in the right-hand ``General`` tab and click ``[ + ]`` to launch the Tag dialog.
 
    - Choose the existing Metaphase from the list of Tags (to filter, type above the list).
 
-   - Click > to move it to the right column, then click OK.
+   - Click ``>`` to move it to the right column, then click ``OK``.
 
 #. Let’s now add Key-Value Pairs
 
-   - Select an Image from the Dataset and in the right-hand pane in General tab, click the harmonica Key-Value Pairs.
+   - Select an Image from the Dataset and in the right-hand pane in ``General`` tab, click the harmonica Key-Value Pairs.
    
       |image0|
 
@@ -63,20 +63,20 @@ We will show:
 
    - The Key-Value Pairs allow you to add lab-book-like additional metadata for the Image. These Key-Value Pairs are also specifically searchable. See :doc:`search-omero`.
 
-#. It is also possible to add Comment, Attachment and Rating to selected Images in the right-hand pane in General tab.
+#. It is also possible to add Comment, Attachment and Rating to selected Images in the right-hand pane in the ``General`` tab.
 
 #. Filter using annotations
 
-   - Images can also be filtered by Name, Tag, Key-Value pairs or Rating in the centre pane, using the Add filter chooser above the thumbnails.
+   - Images can also be filtered by Name, Tag, Key-Value pairs or Rating in the centre pane, using the ``Add filter`` chooser above the thumbnails.
 
-   - For example, choose Tag and then select Metaphase from the list of Tags to show the images we tagged earlier.
+   - For example, choose ``Tag`` and then select ``Metaphase`` from the list of Tags to show the images we tagged earlier.
 
    - Or choose to filter by Key-Values. You can then filter by a particular Key. If you select a Key where all the
      values are numbers, you can filter for those that are greater than, less than or equal to a threshold value.
 
       |image3|
 
-   - Review the filtered Images, choose a favourite Image and under the Rating section in the right-hand pane, click on the 5th star to add a rating of 5
+   - Review the filtered Images, choose a favourite Image and under the ``Ratings`` section in the right-hand pane, click on the 5th star to add a rating of 5
    
       |image2|
 
