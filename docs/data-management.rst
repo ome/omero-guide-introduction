@@ -22,6 +22,8 @@ We will show:
 
 -  How to adjust the rendering settings of your and other users’ images from the Preview panel.
 
+-  How to organize images in Projects and Datasets.
+
 -  How to move the data between groups if you are data owner.
 
 -  How to move the data between groups if you are an administrator working on behalf of others.
