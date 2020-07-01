@@ -154,6 +154,9 @@ You can organize the data in the left-hand side tree by creating new Projects, D
 
 |image2e|
 
+.. note::
+    If you are an administrator or administrator with restricted privileges working in a group you are not a member of: All containers (Projects, Datasets, Screens) created in OMERO.web in such group will belong to the user whose portfolio you are working with. This helps to retain the possibility for this user to manipulate their containers even though you created them. Nevertheless if the administrator creates new links between such containers and other objects of the user, these will belong to the administrator and the user will not be able to unlink the objects later.
+
 Move data between groups
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
