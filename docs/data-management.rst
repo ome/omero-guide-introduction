@@ -147,7 +147,7 @@ You can organize the data in the left-hand side tree by creating new Projects, D
        |image2d|
 
 .. warning::
-    **The ``Copy Link`` feature will not create a new independent copy of the images.** There is no possibility to copy images in OMERO at the moment in a way resulting in a new independent copy. All what is copied during the above action is the link between the images and the dataset (i.e. now the same image(s) are linked to two datasets). 
+    **The ``Copy Link`` feature will not create a new independent copy of the images.** There is no possibility to copy images in OMERO at the moment in a way resulting in a new independent copy. All what is copied during the above action is the link between the images and the dataset (i.e. now the same image(s) is(are) linked to two datasets). 
     
     If you delete one of the datasets, the second dataset will retain the images. Nevertheless, **if you directly select and delete the images with two links themselves, the images will be deleted.** There is a clear warning in the OMERO.web when you try to delete such doubly-linked image, see screenshot below.
 
@@ -224,7 +224,7 @@ Typically an administrator works on behalf of other users in a group where the a
    :height: 1.3in
 .. |image2e| image:: images/management3e.png
    :width: 6.3in
-   :height: 1.87in
+   :height: 1.6in
 .. |image3| image:: images/management4.png
    :width: 7.51667in
    :height: 5in
