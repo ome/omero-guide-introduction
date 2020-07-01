@@ -130,6 +130,30 @@ Browsing and rendering
 
 #. You can revert to the original settings for an Image or Dataset. For example, using the context menu for a Dataset in the tree, select ``Rendering Settings > Set Imported and Save``.
 
+
+Manage Images in Dataset/Projects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can organize the data in the left-hand side tree by creating new Projects, Datasets and linking the Images to those new containers.
+
+#. Use the Project |image2b| and Dataset |image2c| icons above the left hand side tree or the right-click contextual menu to create new Datasets or Projects.
+
+#. Drag and drop Images or Datasets between Datasets or Projects.
+
+#. Copy Images using the right-click context menu: 
+     - Select the images to be copied, then right-click and click ``Edit > Copy Link``
+     - Select the Dataset you want to copy the images to, right-click and click on ``Edit > Paste Link``
+
+       |image2d|
+
+.. warning::
+    **The ``Copy Link`` feature will not create a new independent copy of the images.** There is no possibility to copy images in OMERO at the moment in a way resulting in a new independent copy. All what is copied during the above action is the link between the images and the dataset (i.e. now the same image(s) are linked to two datasets). 
+    
+    If you delete one of the datasets, the second dataset will retain the images. Nevertheless, **if you directly select and delete the images with two links themselves, the images will be deleted.** There is a clear warning in the OMERO.web when you try to delete such doubly-linked image, see screenshot below.
+
+
+|image2e|
+
 Move data between groups
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -189,6 +213,18 @@ Typically an administrator works on behalf of other users in a group where the a
 .. |image2| image:: images/management3.png
    :width: 3.41667in
    :height: 1.625in
+.. |image2b| image:: images/management3b.png
+   :width: 0.3167in
+   :height: 0.215in
+.. |image2c| image:: images/management3c.png
+   :width: 0.21667in
+   :height: 0.215in
+.. |image2d| image:: images/management3d.png
+   :width: 2.5in
+   :height: 1.3in
+.. |image2e| image:: images/management3e.png
+   :width: 6.3in
+   :height: 1.87in
 .. |image3| image:: images/management4.png
    :width: 7.51667in
    :height: 5in
