@@ -98,7 +98,8 @@ Administrate using the Web Interface
      - ``Administrator with restricted privileges``
 
 #. If you choose the role to be ``Administrator with restricted privileges``,
-   you must also select the privileges in a subsequent menu. 
+   you must also select the privileges in a subsequent menu.
+   Hover with mouse over the checkboxes to see short descriptions of the privileges.
    Creating an administrator with restricted privileges allows to give some limited rights to some trusted users
    e.g. to allow a facility manager to import data for other users. It is currently preferable to create users with such roles via the OMERO.web Interface.
    More about
