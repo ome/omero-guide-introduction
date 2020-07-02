@@ -9,6 +9,7 @@ administrator privileges. We will show:
 
 - How to manage groups, creating and editing a new/existing group
 - How to manage users, creating and editing a new/existing user
+- How to set up OMERO server to be able to email all users
 
 Resources
 ---------
@@ -242,6 +243,34 @@ The administrator or administrator with restricted privileges can add an LDAP us
 
 #. Note that it is advisable to clarify the OMERO group membership situation of the LDAP users soon after their joined OMERO. This can be done for example by adding the new user to their lab group (e.g. ``Lab1``) in OMERO as well and changing the default group of such user in OMERO to be their lab group. See above for how to change the default group of a user. Otherwise, the new LDAP&OMERO users might be importing their data into the ``My Data`` group for some period of time, without realizing the data are not accessible (because ``My Data`` is a private group) to their colleagues in the lab group for cooperative purposes.
 
+*Set up OMERO server to email users*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you are a full administrator of OMERO, you can email OMERO users.
+This can be helpful for example to inform users about downtimes, new features, or imminent changes
+regarding OMERO.
+
+#. In cooperation with you OMERO.server system administrator, consult the 
+   `documentation on email in OMERO <https://docs.openmicroscopy.org/omero/latest/sysadmins/mail.html>`_.
+
+#. Once the OMERO.server is configured, login to OMERO.web and
+   in the top toolbar, click the ``Admin`` button |image0|\ .
+
+#. Click on the ``Email`` tab. 
+
+#. Choose the appropriate options, enter the email subject and message.
+   Note that depending on the number of users you are choosing to email, 
+   the action might take a long time to finish. It is necessary to keep
+   the session of OMERO.web alive (i.e. doing actions still being logged in OMERO.web)
+   until the ``Activities`` dropdown menu (icon to the left of the ``Search``
+   in the top bar of OMERO.web) reports that all emails were sent.
+
+   |image9|
+
+   |image10|
+
+#. Click ``Send`` button.
+
 .. |image0| image:: images/groupsusersadm1.png
    :width: 0.75in
    :height: 0.38542in
@@ -264,4 +293,8 @@ The administrator or administrator with restricted privileges can add an LDAP us
 .. |image7| image:: images/groupsusersadm7.png
    :width: 3in
 .. |image8| image:: images/groupsusersadm8.png
+   :width: 7in
+.. |image9| image:: images/groupsusersadm9.png
+   :width: 7in
+.. |image10| image:: images/groupsusersadm10.png
    :width: 7in
