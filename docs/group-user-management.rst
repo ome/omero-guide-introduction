@@ -93,9 +93,12 @@ Administrate using the Web Interface
 #. Mandatory fields are highlighted in red.
 
 #. You can select the role of the user to be:
-     - ``User`` (no special privileges)
-     - ``Administrator`` (this means full administrator)
-     - ``Administrator with restricted privileges``
+
+   - ``User`` (no special privileges)
+
+   - ``Administrator`` (this means full administrator)
+
+   - ``Administrator with restricted privileges``
 
 #. If you choose the role to be ``Administrator with restricted privileges``,
    you must also select the privileges in a subsequent menu.
