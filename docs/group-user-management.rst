@@ -92,11 +92,21 @@ Administrate using the Web Interface
 
 #. Mandatory fields are highlighted in red.
 
-#. You can select the role of the user.
+#. You can select the role of the user to be:
+     - ``User`` (no special privileges)
+     - ``Administrator`` (this means full administrator)
+     - ``Administrator with restricted privileges``
+
+#. If you choose the role to be ``Administrator with restricted privileges``,
+   you must also select the privileges in a subsequent menu. 
+   Creating an administrator with restricted privileges allows to give some limited rights to some trusted users
+   e.g. to allow a facility manager to import data for other users. It is currently preferable to create users with such roles via the OMERO.web Interface.
+   More about
+   ``Administrator with restricted privileges`` can be found in `this OMERO documentation section <https://docs.openmicroscopy.org/omero/latest/sysadmins/restricted-admins.html>`_.
 
 #. Click ``Save``.
 
-#. To edit a User, click on the ``Pencil`` button |image6| to the right of the line with the name of the user. You can add or remove the user to/from a group or modify the roles. Creating an administrator with restricted privileges allows to give some limited rights to some trusted users e.g. to allow a facility manager to import data for other users. It is currently preferable to create users with such roles via the Web Interface.
+#. To edit a User, click on the ``Pencil`` button |image6| to the right of the line with the name of the user. You can add or remove the user to/from a group or modify the roles.
 
 #. Click ``Save``.
 
