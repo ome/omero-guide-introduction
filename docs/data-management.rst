@@ -11,10 +11,10 @@ Description
 
 We will show:
 
--  How to browse data in OMERO.web, navigating to yours and other users’ images.
+-  How to browse data in OMERO.web, navigating to yours and other users’ Images.
 
 
--  How to use the basic layout of OMERO.web for images organized in Projects and Datasets.
+-  How to use the basic layout of OMERO.web for Images organized in Projects and Datasets.
 
 -  How to use OMERO.web for viewing of High-Content Screening (HCS) data.
 
@@ -22,7 +22,7 @@ We will show:
 
 -  How to adjust the rendering settings of your and other users’ images from the Preview panel.
 
--  How to organize images in Projects and Datasets.
+-  How to organize Images in Projects and Datasets.
 
 -  How to move the data between groups if you are data owner.
 
@@ -40,9 +40,9 @@ Resources
 
 -  For the HCS data screenshot, the IDR data https://idr.openmicroscopy.org/webclient/?show=run-5403 were used.
 
--  To import images and metadata, see the `maintenance scripts <https://github.com/ome/training-scripts/tree/master/maintenance>`_ for more details.
+-  To import Images and metadata, see the `maintenance scripts <https://github.com/ome/training-scripts/tree/master/maintenance>`_ for more details.
 
--  For import of images, we use `in_place_import_as.sh <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/in_place_import_as.sh>`_.
+-  For import of Images, we use `in_place_import_as.sh <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/in_place_import_as.sh>`_.
 
 -  The cooperation in OMERO is described in `Groups and permissions system <https://docs.openmicroscopy.org/latest/omero/sysadmins/server-permissions.html>`_.
 
@@ -52,16 +52,16 @@ Step-by-Step
 Data layout and ownership, usernames (when running a workshop)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-All images have been pre-imported into the
+All Images have been pre-imported into the
 OMERO.server. For training purposes, we prepared 50 users on the
-OMERO.server. Each of these 50 users has their own set of images. These
-sets consist of images of the same name, size, shape, form and quality
+OMERO.server. Each of these 50 users has their own set of Images. These
+sets consist of Images of the same name, size, shape, form and quality
 for each user. Thus, the data of each user appears the same but, in
 actual fact, are different and totally independent sets. Thus, small
 discrepancies and differences between the users are completely possible.
 Further, if one user deletes their own data in OMERO (please do not
 delete anything on our server), this will not have any bearing on the
-other 49 sets of images belonging to the 49 other users.
+other 49 sets of Images belonging to the 49 other users.
 
 The login names of the 50 users are “user-x” where x goes from 1 to 50.
 We have given to each of the 50 users in OMERO a unique first name and
@@ -69,7 +69,7 @@ surname which we picked from a list of 50 famous scientists e.g. Ada
 Lovelace or Francis Crick. This is the name (“your” name) which you will
 see in the top-right corner of the OMERO webclient after you log in with your loginname.
 
-In the OMERO webclient the default view shows only your own images.
+In the OMERO webclient the default view shows only your own Images.
 
 Browsing and rendering
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -90,7 +90,7 @@ Browsing and rendering
 
 #.  These represent imported Images. The original Images are stored on the server and the generated thumbnails allow us to browse them.
 
-#.  `Bio-Formats <https://www.openmicroscopy.org/bio-formats/>`_ is used to read the pixel-data and metadata from over 150 different image formats, including multi-z timelapse images with many channels, they are referenced as 5D Images. Large pathology and medical images are also supported.
+#.  `Bio-Formats <https://www.openmicroscopy.org/bio-formats/>`_ is used to read the pixel-data and metadata from over 150 different Image formats, including multi-z timelapse Images with many channels, they are referenced as 5D Images. Large pathology and medical Images are also supported.
 
 #.  For HCS data, the layout of the OMERO.web is a bit different. The HCS data are usually organized in following manner:
 
@@ -102,7 +102,7 @@ Browsing and rendering
 
     #. A ``Plate`` may or may not contain several ``Runs``. 
 
-    #. The screenshot below shows the typical layout of a ``Plate`` in OMERO.web, where the ``Wells`` are organized in rows and columns. The ``Plate`` contains one ``Run``. One ``Well`` is selected in the central pane and it contains 4 ``Images`` whose thumbnails are displayed below the central pane. The bottom-left corner shows the positions of the images (called ``Fields`` in this context) inside that ``Well``.
+    #. The screenshot below shows the typical layout of a ``Plate`` in OMERO.web, where the ``Wells`` are organized in rows and columns. The ``Plate`` contains one ``Run``. One ``Well`` is selected in the central pane and it contains 4 ``Images`` whose thumbnails are displayed below the central pane. The bottom-left corner shows the positions of the Images (called ``Fields`` in this context) inside that ``Well``.
 
     |image3|
 
@@ -114,7 +114,7 @@ Browsing and rendering
 
 #. In the ``Preview`` tab in the right-hand panel, you can also view the Image.
 
-#. For multi-plane images, sliders allow you to move through Z or Time dimensions.
+#. For multi-plane Images, sliders allow you to move through Z or Time dimensions.
 
 #. Viewing Images **does not** download the whole Image to the client. Only the viewed Image plane is rendered from the original Image file on the server and sent back to the OMERO.web client.
 
@@ -143,15 +143,15 @@ You can organize the data in the left-hand side tree by creating new Projects, D
 #. Drag and drop Images between Datasets and Datasets between Projects.
 
 #. Copy Images using the right-click context menu: 
-     - Select the images to be copied, then right-click and click ``Edit > Copy Link``
-     - Select the Dataset you want to copy the images to, right-click and click on ``Edit > Paste Link``
+     - Select the Images to be copied, then right-click and click ``Edit > Copy Link``
+     - Select the Dataset you want to copy the Images to, right-click and click on ``Edit > Paste Link``
 
        |image2d|
 
 .. warning::
-    **The ``Copy Link`` feature will not create a new independent copy of the images.** There is no possibility to copy images in OMERO at the moment in a way resulting in a new independent copy. All what is copied during the above action is the link between the images and the dataset (i.e. now the same image(s) is(are) linked to two datasets). 
+    **The ``Copy Link`` feature will not create a new independent copy of the Images.** There is no possibility to copy Images in OMERO at the moment in a way resulting in a new independent copy. All what is copied during the above action is the link between the Images and the dataset (i.e. now the same Image(s) is(are) linked to two datasets). 
     
-    If you delete one of the datasets, the second dataset will retain the images. Nevertheless, **if you directly select and delete the images with two links themselves, the images will be deleted.** There is a clear warning in the OMERO.web when you try to delete such doubly-linked image, see screenshot below.
+    If you delete one of the datasets, the second dataset will retain the Images. Nevertheless, **if you directly select and delete the Images with two links themselves, the Images will be deleted.** There is a clear warning in the OMERO.web when you try to delete such doubly-linked Image, see screenshot below.
 
 
 |image2e|
