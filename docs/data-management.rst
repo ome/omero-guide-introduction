@@ -140,7 +140,7 @@ You can organize the data in the left-hand side tree by creating new Projects, D
 
 #. Use the Project |image2b| and Dataset |image2c| icons above the left hand side tree or the right-click contextual menu to create new Datasets or Projects.
 
-#. Drag and drop Images or Datasets between Datasets or Projects.
+#. Drag and drop Images between Datasets and Datasets between Projects.
 
 #. Copy Images using the right-click context menu: 
      - Select the images to be copied, then right-click and click ``Edit > Copy Link``
