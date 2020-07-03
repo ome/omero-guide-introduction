@@ -210,32 +210,22 @@ Typically an administrator works on behalf of other users in a group where the a
 
 
 .. |image0| image:: images/management1.png
-   :width: 4.15104in
    :height: 3.4592in
 .. |image1| image:: images/management2.png
-   :width: 5.69271in
    :height: 2.84137in
 .. |image2| image:: images/management3.png
-   :width: 3.41667in
    :height: 1.625in
 .. |image2b| image:: images/management3b.png
-   :width: 0.3167in
-   :height: 0.215in
+   :height: 0.245in
 .. |image2c| image:: images/management3c.png
-   :width: 0.21667in
    :height: 0.215in
 .. |image2d| image:: images/management3d.png
-   :width: 2.5in
    :height: 1.3in
 .. |image2e| image:: images/management3e.png
-   :width: 6.3in
    :height: 1.6in
 .. |image3| image:: images/management4.png
-   :width: 7.51667in
    :height: 5in
 .. |image4| image:: images/management5.png
-   :width: 2in
    :height: 2.4592in
 .. |image5| image:: images/management6.png
-   :width: 4in
    :height: 4.9in
