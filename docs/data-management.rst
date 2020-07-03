@@ -149,9 +149,9 @@ You can organize the data in the left-hand side tree by creating new Projects, D
        |image2d|
 
 .. warning::
-    **The ``Copy Link`` feature will not create a new independent copy of the Images.** There is no possibility to copy Images in OMERO at the moment in a way resulting in a new independent copy. All what is copied during the above action is the link between the Images and the dataset (i.e. now the same Image(s) is(are) linked to two datasets). 
+    **The ``Copy Link`` feature will not create a new independent copy of the Images.** There is no possibility to copy Images in OMERO at the moment in a way resulting in a new independent copy. All what is copied during the above action is the link between the Images and the Dataset (i.e. now the same Image(s) is(are) linked to two Datasets). 
     
-    If you delete one of the datasets, the second dataset will retain the Images. Nevertheless, **if you directly select and delete the Images with two links themselves, the Images will be deleted.** There is a clear warning in the OMERO.web when you try to delete such doubly-linked Image, see screenshot below.
+    If you delete one of the Datasets, the second Dataset will retain the Images. Nevertheless, **if you directly select and delete the Images with two links themselves, the Images will be deleted.** There is a clear warning in the OMERO.web when you try to delete such doubly-linked Image, see screenshot below.
 
 
 |image2e|
