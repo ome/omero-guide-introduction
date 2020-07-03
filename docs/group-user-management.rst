@@ -246,7 +246,8 @@ The administrator or administrator with restricted privileges can add an LDAP us
 *Set up OMERO server to email users*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are a full administrator of OMERO, you can email OMERO users.
+If you are a full administrator or a `restricted administrator <https://docs.openmicroscopy.org/omero/latest/sysadmins/restricted-admins.html>`_ 
+with any or no privileges, you can email OMERO users.
 This can be helpful for example to inform users about downtimes, new features, or imminent changes
 regarding OMERO.
 
