@@ -9,7 +9,7 @@ administrator privileges. We will show:
 
 - How to manage groups, creating and editing a new/existing group
 - How to manage users, creating and editing a new/existing user
-- How to set up OMERO server to be able to email all users
+- How to set up the OMERO server to be able to email all users
 
 Resources
 ---------
@@ -111,7 +111,7 @@ Administrate using the Web Interface
 
 #. Click ``Save``.
 
-#. To edit a User, click on the ``Pencil`` button |image6| to the right of the line with the name of the user. You can add or remove the user to/from a group or modify the roles.
+#. To edit a ``User``, click on the ``Pencil`` button |image6| to the right of the line with the name of the user. You can add/remove the ``User`` to/from a group or modify the roles.
 
 #. Click ``Save``.
 
@@ -246,7 +246,7 @@ The administrator or administrator with restricted privileges can add an LDAP us
 *Set up OMERO server to email users*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are a full administrator or a `restricted administrator <https://docs.openmicroscopy.org/omero/latest/sysadmins/restricted-admins.html>`_ 
+If you are a full administrator or an `administrator with restricted privileges <https://docs.openmicroscopy.org/omero/latest/sysadmins/restricted-admins.html>`_ 
 with any or no privileges, you can email OMERO users.
 This can be helpful for example to inform users about downtimes, new features, or imminent changes
 regarding OMERO.
@@ -254,14 +254,14 @@ regarding OMERO.
 #. In cooperation with you OMERO.server system administrator, consult the 
    `documentation on email in OMERO <https://docs.openmicroscopy.org/omero/latest/sysadmins/mail.html>`_.
 
-#. Once the OMERO.server is configured, login to OMERO.web and
+#. Once the OMERO.server is configured, log in to OMERO.web and
    in the top toolbar, click the ``Admin`` button |image0|\ .
 
 #. Click on the ``Email`` tab. 
 
 #. Choose the appropriate options, enter the email subject and message.
    Note that depending on the number of users you are choosing to email, 
-   the action might take a long time to finish. It is necessary to keep
+   the action might take a long time to finish. It is **necessary** to keep
    the session of OMERO.web alive (i.e. doing actions still being logged in OMERO.web)
    until the ``Activities`` dropdown menu (icon to the left of the ``Search``
    in the top bar of OMERO.web) reports that all emails were sent.
