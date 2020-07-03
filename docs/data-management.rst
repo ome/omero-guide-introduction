@@ -136,7 +136,7 @@ Browsing and rendering
 Manage Images in Dataset/Projects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can organize the data in the left-hand side tree by creating new Projects, Datasets and linking the Images to those new containers.
+You can organize the data in the left-hand side tree by creating new Projects and Datasets. You can link the Images to the new or existing Datasets and Datasets to new or existing Projects.
 
 #. Use the Project |image2b| and Dataset |image2c| icons above the left-hand side tree or the right-click contextual menu to create new Datasets or Projects.
 
