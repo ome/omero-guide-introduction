@@ -28,6 +28,8 @@ We will show:
 
 -  How to move the data between groups if you are an administrator working on behalf of others.
 
+-  How to prepare data for publication using the OMERO.web.
+
 Setup
 -----
 
@@ -208,6 +210,20 @@ Typically an administrator works on behalf of other users in a group where the a
 
 #. When creating new Datasets or Projects during the move, note that these containers will belong to the owner of the data, not yourself. Also the links between the new containers and the moved data will belong to the owner of the data. This should help to facilitate a smooth workflow, retaining the data handling possibilities such as reorganizing the data, renaming the containers you created for them etc. for the owner of the data. 
 
+Prepare data for publication using OMERO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Users can publish Image data to the world using OMERO. Here we describe some steps to facilitate that. The steps are to be done by an administrator or restricted administrator in OMERO. 
+
+#. Consult with the system administrator of your OMERO.server the `configuring of public user on the server <https://docs.openmicroscopy.org/omero/latest/sysadmins/public.html>`_. Read the possibilities about how to restrict the access to the data in public group using url filtering in `the publication with OMERO documentation <https://docs.openmicroscopy.org/omero/latest/sysadmins/public.html>`_
+
+#. Establish a ``public group`` with read-only permissions. See the `publication example documentation <https://docs.openmicroscopy.org/omero/5.6.1/sysadmins/public.html#full-example-of-hosting-data-for-a-publication>`_ and the :doc:`group-user-management` for how to do it. Note: The ``public group`` is just an ordinary read-only group, only a subsequent addition of the ``public user`` to this group makes it public.
+
+#. Think about the best strategy of data layout in the ``public group``, see suggestions about it in the `Group setup part of publication example documentation <https://docs.openmicroscopy.org/omero/5.6.1/sysadmins/public.html#full-example-of-hosting-data-for-a-publication>`_.
+
+#. Consult with the scirntists intending to publish their data about how to Move the data into the ``public group``, or move them yourself. Some helpful hints about the data Move can be found in the `Data migration chapter of the documentation <https://docs.openmicroscopy.org/omero/latest/sysadmins/public.html#data-migration>`_. See above in this guide how to Move the data between groups. The other option is to import the data afresh into the ``public group``. Note: there is no possiblity to copy the data into ``public group`` from another group in OMERO at the moment.
+
+#. Once you are happy with the setup of the ``public group``, add the ``public user`` into the ``public group`` as described in `the documentation <https://docs.openmicroscopy.org/omero/latest/sysadmins/public.html>`_.  This will make the data in the ``public group`` visible to the world.
 
 .. |image0| image:: images/management1.png
    :height: 3.4592in
