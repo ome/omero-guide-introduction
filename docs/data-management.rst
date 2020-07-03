@@ -138,7 +138,7 @@ Manage Images in Dataset/Projects
 
 You can organize the data in the left-hand side tree by creating new Projects, Datasets and linking the Images to those new containers.
 
-#. Use the Project |image2b| and Dataset |image2c| icons above the left hand side tree or the right-click contextual menu to create new Datasets or Projects.
+#. Use the Project |image2b| and Dataset |image2c| icons above the left-hand side tree or the right-click contextual menu to create new Datasets or Projects.
 
 #. Drag and drop Images between Datasets and Datasets between Projects.
 
