@@ -133,14 +133,15 @@ Browsing and rendering
 #. You can revert to the original settings for an Image or Dataset. For example, using the context menu for a Dataset in the tree, select ``Rendering Settings > Set Imported and Save``.
 
 
-Manage Images in Dataset/Projects
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Manage Images in Datasets/Projects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can organize the data in the left-hand side tree by creating new Projects and Datasets. You can link the Images to the new or existing Datasets and Datasets to new or existing Projects.
+For HCS data, you can create new Screens and link Plates to these Screens.
 
 #. Use the Project |image2b| and Dataset |image2c| icons above the left-hand side tree or the right-click contextual menu to create new Datasets or Projects.
 
-#. Drag and drop Images between Datasets and Datasets between Projects.
+#. Drag and drop Images between Datasets and Datasets between Projects. For HCS data, drag and drop Plates between Screens.
 
 #. Copy Images using the right-click context menu: 
      - Select the Images to be copied, then right-click and click ``Edit > Copy Link``
@@ -157,7 +158,9 @@ You can organize the data in the left-hand side tree by creating new Projects an
 |image2e|
 
 .. note::
-    If you are an administrator or administrator with restricted privileges working in a group you are not a member of: All containers (Projects, Datasets, Screens) created in OMERO.web in such group will belong to the user whose portfolio you are working with. This helps to retain the possibility for this user to manipulate their containers even though you created them. Nevertheless if the administrator creates new links between such containers and other objects of the user, these will belong to the administrator and the user will not be able to unlink the objects later.
+    If you are an administrator or administrator with restricted privileges working in a group you are not a member of: All containers (Projects, Datasets, Screens) created in OMERO.web in such group will belong to the user whose portfolio you are working with. This helps to retain the possibility for this user to manipulate their containers even though you created them.
+
+    Nevertheless if the administrator creates new links between such containers and other objects of the user, these will belong to the administrator and the user will not be able to unlink the objects later. This is a current limitation, see details in `this github issue <https://github.com/ome/omero-web/issues/182>`_.
 
 Move data between groups
 ~~~~~~~~~~~~~~~~~~~~~~~~
