@@ -13,3 +13,4 @@ Contents:
    annotate
    search-omero
    group-user-management
+   data-publication
