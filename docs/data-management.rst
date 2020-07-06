@@ -94,15 +94,15 @@ Browsing and rendering
 
 #.  For HCS data, the layout of the OMERO.web is a bit different. The HCS data are usually organized in following manner:
 
-    #. ``Images`` are contained in ``Wells``
+    - ``Images`` are contained in ``Wells``
 
-    #. ``Wells`` are contained in ``Plates``
+    - ``Wells`` are contained in ``Plates``
 
-    #. ``Plates`` are organized in ``Screens``.
+    - ``Plates`` are organized in ``Screens``.
 
-    #. A ``Plate`` may or may not contain several ``Runs``. 
+    - A ``Plate`` may or may not contain several ``Runs``. 
 
-    #. The screenshot below shows the typical layout of a ``Plate`` in OMERO.web, where the ``Wells`` are organized in rows and columns. The ``Plate`` contains one ``Run``. One ``Well`` is selected in the central pane and it contains 4 ``Images`` whose thumbnails are displayed below the central pane. The bottom-left corner shows the positions of the Images (called ``Fields`` in this context) inside that ``Well``.
+    - The screenshot below shows the typical layout of a ``Plate`` in OMERO.web, where the ``Wells`` are organized in rows and columns. The ``Plate`` contains one ``Run``. One ``Well`` is selected in the central pane and it contains four ``Images`` whose thumbnails are displayed below the central pane. The bottom-left corner shows the positions of the Images (called ``Fields`` in this context) inside that ``Well``.
 
     |image3|
 
@@ -110,7 +110,8 @@ Browsing and rendering
 
     - core metadata in the ``General`` tab
 
-    - additional metadata in the ``Acquisition`` tab. All the metadata read by Bio-Formats can be downloaded at any time.
+    - additional metadata in the ``Acquisition`` tab. 
+    - All the metadata read by Bio-Formats can be downloaded at any time.
 
 #. In the ``Preview`` tab in the right-hand panel, you can also view the Image.
 
@@ -160,7 +161,7 @@ For HCS data, you can create new Screens and link Plates to these Screens.
 .. note::
     If you are an administrator or administrator with restricted privileges working in a group you are not a member of: All containers (Projects, Datasets, Screens) created in OMERO.web in such group will belong to the user whose portfolio you are working with. This helps to retain the possibility for this user to manipulate their containers even though you created them.
 
-    Nevertheless if the administrator creates new links between such containers and other objects of the user, these will belong to the administrator and the user will not be able to unlink the objects later. This is a current limitation, see details in `this github issue <https://github.com/ome/omero-web/issues/182>`_.
+    Nevertheless if the administrator creates new links between such containers and other objects of the user, these will belong to the administrator and the user will not be able to unlink the objects later. This is a current limitation, see details in `this GitHub issue <https://github.com/ome/omero-web/issues/182>`_.
 
 Move data between groups
 ~~~~~~~~~~~~~~~~~~~~~~~~
