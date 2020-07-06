@@ -4,12 +4,12 @@ Administrate Groups and Users
 Description
 -----------
 
-This chapter will show how to manage groups and users using the graphical interface in OMERO.web and the command-line interface. Most of following tasks below can only be done by users with some
+This chapter will show how to manage groups and users using the graphical interface in OMERO.web and the command-line interface. Most of the following tasks below can only be done by users with some
 administrator privileges. We will show:
 
-- How to manage groups, creating and editing a new/existing group
-- How to manage users, creating and editing a new/existing user
-- How to set up the OMERO server to be able to email all users
+- How to manage groups, creating and editing a new/existing group.
+- How to manage users, creating and editing a new/existing user.
+- How to set up the OMERO server to be able to email all users.
 
 Resources
 ---------
@@ -51,12 +51,12 @@ Administrate using the Web Interface
 
 #. Log in using the username and password provided.
 
-#. In the top toolbar, click the ``Admin`` button |image0|\ . Note that the ``Admin`` button is only available for users with certain privileges (administrators and administrators with restricted privileges). If you are a user or a group owner, navigate to the section ``Web Interface: Users change their own settings`` below.
+#. In the top toolbar, click the ``Admin`` button |image0|\ . Note that the ``Admin`` button is only available for users with certain privileges: administrators and administrators with restricted privileges. If you are a user or a group owner, navigate to the section ``Web Interface: Users change their own settings`` below.
 
 *Web Interface: Managing Groups*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Click on the ``Groups`` tab. You can search for groups if desired
+#. Click on the ``Groups`` tab. You can search for groups if desired.
 
 #. To create a new Group, click on the ``Add new Group`` button. Note that the ``Name`` and ``Permissions`` fields are mandatory.
 
@@ -75,11 +75,11 @@ Administrate using the Web Interface
 *Web Interface: Managing Users*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Click on the ``Users`` tab
+#. Click on the ``Users`` tab.
 
 #. You can search for users if you wish.
 
-#. OMERO.web denotes the user categories using small helpful icons.
+#. OMERO.web denotes the user categories using small helpful icons:
 
    - Users with administrator privileges have a ``tools`` icon \ |image2|.
 
@@ -95,11 +95,11 @@ Administrate using the Web Interface
 
 #. You can select the role of the user to be:
 
-   - ``User`` (no special privileges)
+   - ``User`` (no special privileges).
 
-   - ``Administrator`` (this means full administrator)
+   - ``Administrator`` (this means full administrator).
 
-   - ``Administrator with restricted privileges``
+   - ``Administrator with restricted privileges``.
 
 #. If you choose the role to be ``Administrator with restricted privileges``,
    you must also select the privileges in a subsequent menu.
@@ -118,7 +118,7 @@ Administrate using the Web Interface
 *Web Interface: Users change their own settings*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Note that these features are not limited to administrators, any user can change their settings in the manner described here. Furthermore, this is the preferred way for Group Owners to manage their groups.
+#. Note that these features are not limited to administrators, **any** user can change their settings in the manner described here. Furthermore, this is the preferred way for Group Owners to manage their groups.
 
 #. In OMERO.web, click in the top-right corner of the webclient, click on your name, then, in the dropdown menu, click on ``User settings``.
 
@@ -158,7 +158,7 @@ Further, the CLI offers an environment in which custom bash scripts for user/gro
 
      $ omero group list --style csv > groups.csv
 
-#. To add an existing user ``user-1`` to the ``Lab1`` group and make him/her a group owner (the option ``--as-owner`` is not needed when adding a member), run::
+#. To add an existing user ``user-1`` to the ``Lab1`` group and make that user a group owner (the option ``--as-owner`` is not needed when adding a member), run::
 
      $ omero group adduser user-1 --name=Lab1 --as-owner
 
@@ -215,7 +215,7 @@ Further, the CLI offers an environment in which custom bash scripts for user/gro
 
      $ omero obj update Experimenter:123 email='lpasteur@demo.co.uk'
 
-#. Make a user inactive. User cannot be deleted but it is possible to prevent a user from logging in. For that, we need to remove the user from the ``user`` group (an internal OMERO group)::
+#. Make a user inactive. User **cannot** be deleted but it is possible to prevent a user from logging in. For that, we need to remove the user from the ``user`` group (an internal OMERO group)::
 
      $ omero user leavegroup user --name=lpasteur
 
@@ -233,22 +233,22 @@ Typically, it is impractical to synchronize the OMERO groups with LDAP groups. I
 
 The administrator or administrator with restricted privileges can add an LDAP user to OMERO even before the user have ever logged in to OMERO:
 
-#. First create the existing LDAP user as OMERO user (example user name is ``enoether``)::
+#. First create the existing LDAP user as OMERO user. In the example below the user name is ``enoether``::
 
       $ omero ldap create enoether
 
-#. The user is now a member of the ``My Data`` group in OMERO. Then (if needed) add the user to the ``Lab1`` group::
+#. The user is now a member of the ``My Data`` group in OMERO. Then, if needed, add the user to the ``Lab1`` group::
 
       $ omero group adduser enoether --name=Lab1
 
-#. Note that it is advisable to clarify the OMERO group membership situation of the LDAP users soon after their joined OMERO. This can be done for example by adding the new user to their lab group (e.g. ``Lab1``) in OMERO as well and changing the default group of such user in OMERO to be their lab group. See above for how to change the default group of a user. Otherwise, the new LDAP&OMERO users might be importing their data into the ``My Data`` group for some period of time, without realizing the data are not accessible (because ``My Data`` is a private group) to their colleagues in the lab group for cooperative purposes.
+#. Note that it is advisable to clarify the OMERO group membership situation of the LDAP users soon after they joined OMERO. This can be done for example by adding the new user to their lab group (e.g. ``Lab1``) in OMERO as well and by changing the default group of such user in OMERO to be their lab group. See above for how to change the default group of a user. Otherwise, the new LDAP&OMERO users might be importing their data into the ``My Data`` group for some period of time, without realizing the data are not accessible to their colleagues in the lab group for cooperative purposes because ``My Data`` is a private group.
 
 *Set up OMERO server to email users*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you are a full administrator or an `administrator with restricted privileges <https://docs.openmicroscopy.org/omero/latest/sysadmins/restricted-admins.html>`_ 
 with any or no privileges, you can email OMERO users.
-This can be helpful for example to inform users about downtimes, new features, or imminent changes
+This can be helpful for example to inform users about downtimes, new features or imminent changes
 regarding OMERO.
 
 #. In cooperation with you OMERO.server system administrator, consult the 
@@ -261,7 +261,7 @@ regarding OMERO.
 
 #. Choose the appropriate options, enter the email subject and message.
    Note that depending on the number of users you are choosing to email, 
-   the action might take a long time to finish. It is **necessary** to keep
+   the action might take a long time to finish. You **must** keep
    the session of OMERO.web alive (i.e. doing actions still being logged in OMERO.web)
    until the ``Activities`` dropdown menu (icon to the left of the ``Search``
    in the top bar of OMERO.web) reports that all emails were sent.
