@@ -28,6 +28,7 @@ We will show:
 
 -  How to move the data between groups if you are an administrator working on behalf of others.
 
+
 Setup
 -----
 
@@ -211,7 +212,6 @@ Typically an administrator works on behalf of other users in a group where the a
 #. Follow further the steps described in the section ``Move data between groups: owners of data`` above, taking note of the ``Not included`` objects.
 
 #. When creating new Datasets or Projects during the move, note that these containers will belong to the owner of the data, not yourself. Also the links between the new containers and the moved data will belong to the owner of the data. This should help to facilitate a smooth workflow, retaining the data handling possibilities such as reorganizing the data, renaming the containers you created for them etc. for the owner of the data. 
-
 
 .. |image0| image:: images/management1.png
    :height: 3.4592in
