@@ -43,7 +43,11 @@ Step-by-step
 
 #. Connect using the provided credentials
 
-#. Let’s add annotations to Images. We will add Tags to indicate Metaphase stages of these cells.
+#. Let us add annotations to Images.
+
+#. Note that you can add annotations using this interface to any object (or more of them) which you can select in the left-hand side tree or central pane, this means ``Project``, ``Dataset``, ``Image``, ``Screen``, ``Plate`` and ``Well``.
+
+#. First, we will add Tags to indicate Metaphase stages of these cells.
 
    - Select one or more Images in the siRNAi-HeLa Dataset of cells which appear to be in metaphase.
 
@@ -53,7 +57,7 @@ Step-by-step
 
    - Click ``>`` to move it to the right column, then click ``OK``.
 
-#. Let’s now add Key-Value Pairs
+#. Let us now add Key-Value Pairs
 
    - Select an Image from the Dataset and in the right-hand pane in ``General`` tab, click the harmonica Key-Value Pairs.
    
@@ -63,7 +67,17 @@ Step-by-step
 
    - The Key-Value Pairs allow you to add lab-book-like additional metadata for the Image. These Key-Value Pairs are also specifically searchable. See :doc:`search-omero`.
 
-#. It is also possible to add Comment, Attachment and Rating to selected Images in the right-hand pane in the ``General`` tab.
+#. For adding of File Attachments:
+
+   - Select one or more objects in the left-hand side tree, such as ``Dataset`` or ``Image``.
+   - Expand the ``Attachments`` harmonica in the right-hand pane. 
+   - Click the plus button.
+
+      |image1b|
+
+   - You can attach any type of file using this function. If you select a file from your local hierarchy, the feature will upload that file to the OMERO.server and save it there. The content of ``.pdf``, ``CSV`` and plain text files is also searchable in OMERO.
+
+#. You can also add Comments, and Rating to selected objects - follow analogous steps to the ones descirbed above for Tags, Key-Value pairs and File Attachments.
 
 #. Filter using annotations
 
@@ -88,6 +102,8 @@ Step-by-step
 .. |image1| image:: images/annotate2.png
    :width: 3.54167in
    :height: 1.91667in
+.. |image1b| image:: images/annotate1b.png
+   :width: 3.54167in
 .. |image2| image:: images/annotate3.png
    :width: 2.93977in
    :height: 0.91146in
