@@ -46,7 +46,7 @@ Step-by-step
 
    - Select one or more Images in the siRNAi-HeLa Dataset of cells which appear to be in metaphase.
 
-   - Choose the Tag option in the right-hand ``General`` tab and click ``[ + ]`` to launch the Tag dialog.
+   - Choose the Tag harmonica in the right-hand ``General`` tab and click ``[ + ]`` to launch the Tag dialog.
 
    - Choose the existing ``Metaphase`` tag from the list of Tags (to filter, type above the list).
 
