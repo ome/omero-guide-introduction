@@ -72,7 +72,17 @@ Step-by-step
 
    - You can attach any type of file using this function. If you select a file from your local hierarchy, the feature will upload that file to the OMERO.server and save it there. The content of ``.pdf``, ``CSV`` and plain text files is also searchable in OMERO.
 
-#. You can also add Comments, and Rating to selected objects - follow analogous steps to the ones descirbed above for Tags, Key-Value pairs and File Attachments.
+#. Remove a File Attachment.
+
+   - Find the File Attachment you have just added.
+
+   - Click on the ``minus`` sign to the right of it.
+
+      |image1c|
+
+   - The removal action just unlinks the File Attachment from the particual selected object(s). The File Attachment is not deleted from the server. If deletion is needed, click in the workflow above on the ``cross`` icon instead of the ``minus`` icon.
+
+#. You can also add Comments and Rating to selected objects - follow analogous steps to the ones descirbed above for Tags, Key-Value pairs and File Attachments.
 
 #. Filter using annotations
 
@@ -98,6 +108,8 @@ Step-by-step
    :width: 3.54167in
    :height: 1.91667in
 .. |image1b| image:: images/annotate1b.png
+   :width: 3.54167in
+.. |image1c| image:: images/annotate1c.png
    :width: 3.54167in
 .. |image2| image:: images/annotate3.png
    :width: 2.93977in
