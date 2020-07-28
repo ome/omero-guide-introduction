@@ -1,8 +1,7 @@
 Annotate Data and Filter using Annotations
 ==========================================
 
-In this section, we show various types of annotations supported in
-OMERO and how to use them.
+There are several ways of how to add annotations to objects in OMERO. Here, addition and filtering of annotations using OMERO.web is described. You can add annotations using the OMERO.web interface to any object (or more of them) which you can select in the left-hand side tree or central pane, this means ``Project``, ``Dataset``, ``Image``, ``Screen``, ``Plate`` and ``Well``.
 
 Description
 -----------
@@ -42,10 +41,6 @@ Step-by-step
 #. Open a browser and enter the provided URL
 
 #. Connect using the provided credentials
-
-#. Let us add annotations to Images.
-
-#. Note that you can add annotations using this interface to any object (or more of them) which you can select in the left-hand side tree or central pane, this means ``Project``, ``Dataset``, ``Image``, ``Screen``, ``Plate`` and ``Well``.
 
 #. First, we will add Tags to indicate Metaphase stages of these cells.
 
