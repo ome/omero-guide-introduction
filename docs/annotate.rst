@@ -50,7 +50,7 @@ Step-by-step
 
    - Choose the existing ``Metaphase`` tag from the list of Tags (to filter, type above the list).
 
-   - Click ``>`` to move it to the right column, then click ``OK``.
+   - Click ``>`` to move it to the right column, then click ``Save``.
 
 #. Let us now add Key-Value Pairs
 
