@@ -48,7 +48,7 @@ Step-by-step
 
    - Choose the Tag option in the right-hand ``General`` tab and click ``[ + ]`` to launch the Tag dialog.
 
-   - Choose the existing Metaphase from the list of Tags (to filter, type above the list).
+   - Choose the existing ``Metaphase`` tag from the list of Tags (to filter, type above the list).
 
    - Click ``>`` to move it to the right column, then click ``OK``.
 
