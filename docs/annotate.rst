@@ -70,7 +70,7 @@ Step-by-step
 
       |image1b|
 
-   - You can attach any type of file using this function. If you select a file from your local hierarchy, the feature will upload that file to the OMERO.server and save it there. The content of ``.pdf``, ``CSV`` and plain text files is also searchable in OMERO.
+   - You can attach any type of file using this function. If you select a file from your local filesystem using the ``Browse`` button, the feature will upload that file to the OMERO.server and save it there. The content of ``.pdf``, ``CSV`` and plain text files is also searchable in OMERO.
 
 #. Remove a File Attachment.
 
