@@ -80,7 +80,7 @@ Step-by-step
 
       |image1c|
 
-   - The removal action just unlinks the File Attachment from the particual selected object(s). The File Attachment is not deleted from the server. If deletion is needed, click in the workflow above on the ``cross`` icon instead of the ``minus`` icon.
+   - The removal action just unlinks the File Attachment from the selected object(s). The File Attachment is not deleted from the server. If deletion is needed, click in the workflow above on the ``cross`` icon instead of the ``minus`` icon.
 
 #. You can also add Comments and Rating to selected objects - follow analogous steps to the ones descirbed above for Tags, Key-Value pairs and File Attachments.
 
