@@ -1,8 +1,7 @@
 Annotate Data and Filter using Annotations
 ==========================================
 
-In this section, we show various types of annotations supported in
-OMERO and how to use them.
+There are several ways to add annotations to objects in OMERO. Here, addition and filtering of annotations using OMERO.web is described. You can add annotations using the OMERO.web interface to any object(s) that you can select in the left-hand-side tree or central pane, this means ``Project``, ``Dataset``, ``Image``, ``Screen``, ``Plate`` and ``Well``.
 
 Description
 -----------
@@ -43,17 +42,17 @@ Step-by-step
 
 #. Connect using the provided credentials
 
-#. Let’s add annotations to Images. We will add Tags to indicate Metaphase stages of these cells.
+#. First, we will add Tags to indicate Metaphase stages of these cells.
 
    - Select one or more Images in the siRNAi-HeLa Dataset of cells which appear to be in metaphase.
 
-   - Choose the Tag option in the right-hand ``General`` tab and click ``[ + ]`` to launch the Tag dialog.
+   - Choose the Tag harmonica in the right-hand ``General`` tab and click ``[ + ]`` to launch the Tag dialog.
 
-   - Choose the existing Metaphase from the list of Tags (to filter, type above the list).
+   - Choose the existing ``Metaphase`` tag from the list of Tags (to filter, type above the list).
 
-   - Click ``>`` to move it to the right column, then click ``OK``.
+   - Click ``>`` to move it to the right column, then click ``Save``.
 
-#. Let’s now add Key-Value Pairs
+#. Let us now add Key-Value Pairs
 
    - Select an Image from the Dataset and in the right-hand pane in ``General`` tab, click the harmonica Key-Value Pairs.
    
@@ -63,7 +62,27 @@ Step-by-step
 
    - The Key-Value Pairs allow you to add lab-book-like additional metadata for the Image. These Key-Value Pairs are also specifically searchable. See :doc:`search-omero`.
 
-#. It is also possible to add Comment, Attachment and Rating to selected Images in the right-hand pane in the ``General`` tab.
+#. For adding of File Attachments:
+
+   - Select one or more objects in the left-hand side tree, such as ``Dataset`` or ``Image``.
+   - Expand the ``Attachments`` harmonica in the right-hand pane. 
+   - Click the plus button.
+
+      |image1b|
+
+   - You can attach any type of file using this function. If you select a file from your local filesystem using the ``Browse`` button, the feature will upload that file to the OMERO.server and save it there. The content of ``.pdf``, ``CSV`` and plain text files is also searchable in OMERO.
+
+#. Remove a File Attachment.
+
+   - Find the File Attachment you have just added.
+
+   - Click on the ``minus`` sign to the right of it.
+
+      |image1c|
+
+   - The removal action just unlinks the File Attachment from the selected object(s). The File Attachment is not deleted from the server. If deletion is needed, click in the workflow above on the ``cross`` icon instead of the ``minus`` icon.
+
+#. You can also add Comments and Rating to selected objects - follow analogous steps to the ones descirbed above for Tags, Key-Value pairs and File Attachments.
 
 #. Filter using annotations
 
@@ -88,6 +107,10 @@ Step-by-step
 .. |image1| image:: images/annotate2.png
    :width: 3.54167in
    :height: 1.91667in
+.. |image1b| image:: images/annotate1b.png
+   :width: 3.54167in
+.. |image1c| image:: images/annotate1c.png
+   :width: 3.54167in
 .. |image2| image:: images/annotate3.png
    :width: 2.93977in
    :height: 0.91146in
