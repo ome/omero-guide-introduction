@@ -138,7 +138,7 @@ Browsing and rendering
 
    - Select any image inside that Dataset and click on the pencil |image16| icon in the right-hand pane next to Channels.
 
-   - Input “DAPI” instead of channel “457” and “GFP”, “Aurora-B” and “CY-6\ ” for the other channels.
+   - Input “DAPI” instead of channel “457” and “GFP”, “Aurora-B” and “CY-6” for the other channels.
 
    - Click the ``Apply to All`` button |image17| and confirm by clicking ``Continue``. This will change the channel names of all the images in that Dataset.
 
