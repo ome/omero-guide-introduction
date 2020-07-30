@@ -134,6 +134,13 @@ Browsing and rendering
 
 #. You can revert to the original settings for an Image or Dataset. For example, using the context menu for a Dataset in the tree, select ``Rendering Settings > Set Imported and Save``.
 
+#. Stay in ``General`` tab of the right-nand pane and adjust the channel names:
+
+   - Select any image inside that Dataset and click on the pencil |image16| icon in the right-hand pane next to Channels.
+
+   - Input “DAPI” instead of channel “457” and “GFP”, “Aurora-B” and “CY-6” for the other channels.
+
+   - Click the ``Apply to All`` button |image17| and confirm by clicking ``Continue``. This will change the channel names of all the images in that Dataset.
 
 Manage Images in Datasets/Projects
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -233,3 +240,9 @@ Typically an administrator works on behalf of other users in a group where the a
    :height: 2.4592in
 .. |image5| image:: images/management6.png
    :height: 4.9in
+.. |image16| image:: images/management16.png
+   :width: 0.22917in
+   :height: 0.1875in
+.. |image17| image:: images/management17.png
+   :width: 0.78125in
+   :height: 0.23958in
