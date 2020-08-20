@@ -167,9 +167,15 @@ For HCS data, you can create new Screens and link Plates to these Screens.
 |image2e|
 
 .. note::
-    If you are an administrator or administrator with restricted privileges working in a group you are not a member of: All containers (Projects, Datasets, Screens) created in OMERO.web in such group will belong to the user whose portfolio you are working with. This helps to retain the possibility for this user to manipulate their containers even though you created them.
+    Organizing data of other users as an administrator, restricted administrator or group owner is made easier in OMERO.web in following manner.
 
-    Nevertheless if the administrator creates new links between such containers and other objects of the user, these will belong to the administrator and the user will not be able to unlink the objects later. This is a current limitation, see details in `this GitHub issue <https://github.com/ome/omero-web/issues/182>`_.
+    If you are an administrator or administrator with restricted privileges working in a group you are not a member of, except for private groups where this workflow is not possible, all containers (Projects, Datasets, Screens) created in OMERO.web in such group will belong to the user whose portfolio you are working with.
+
+    Also the links between the containers and their content will belong to that user. In case there are different owners of the container and of the linked content, then the created link will belong to the owner of the linked content.
+
+    This helps to retain the possibility for this user to manipulate their containers even though you created them.
+
+    Nevertheless if the workflow is executed by a group owner (i.e. not and administrator), the new links will belong to the administrator and the user will not be able to unlink the objects later. This is a current limitation.
 
 Move data between groups
 ~~~~~~~~~~~~~~~~~~~~~~~~
