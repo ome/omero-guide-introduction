@@ -52,7 +52,7 @@ master_doc = 'index'
 # General information about the project.
 author = 'Open Microscopy Environment'
 project = u'OMERO general introduction guide'
-copyright = u'2019-%d,' % datetime.datetime.now().year + author
+copyright = u'2019-%d, ' % datetime.datetime.now().year + author
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -275,7 +275,7 @@ texinfo_documents = [
 epub_title = project
 epub_author = author
 epub_publisher = author
-epub_copyright = u'2019-%d,' % datetime.datetime.now().year + author
+epub_copyright = u'2019-%d, ' % datetime.datetime.now().year + author
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'guide template'
