@@ -12,6 +12,7 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+import datetime
 import sys
 import os
 
@@ -49,8 +50,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
+author = 'Open Microscopy Environment'
 project = u'OMERO general introduction guide'
-copyright = u'2019-2020, Open Microscopy Environment'
+copyright = u'2019-%d, ' % datetime.datetime.now().year + author
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -205,7 +207,7 @@ project_basename = project.replace(" ", "")
 base_doc = "%s Documentation" % project
 latex_documents = [
   ('index', project_basename + '.tex', base_doc,
-   u'Open Microscopy Environment', 'manual'),
+   author, 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -235,7 +237,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', project_basename, base_doc,
-     [u'Open Microscopy Environment'], 1)
+     [author], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -249,7 +251,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', project_basename, base_doc,
-   u'Open Microscopy Environment', project_basename, 'One line description of project.',
+   author, project_basename, 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -269,10 +271,11 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
+
 epub_title = project
-epub_author = u'Open Microscopy Environment'
-epub_publisher = u'Open Microscopy Environment'
-epub_copyright = u'2019, Open Microscopy Environment'
+epub_author = author
+epub_publisher = author
+epub_copyright = u'2019-%d, ' % datetime.datetime.now().year + author
 
 # The basename for the epub file. It defaults to the project name.
 #epub_basename = u'guide template'
@@ -334,3 +337,7 @@ epub_exclude_files = ['search.html']
 
 # If false, no index is generated.
 #epub_use_index = True
+
+linkcheck_ignore = [
+r'https://idr.openmicroscopy.org/webclient/\?show=.*'
+]
