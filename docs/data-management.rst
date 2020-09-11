@@ -171,7 +171,7 @@ For HCS data, you can create new Screens and link Plates to these Screens.
 
     If you are an administrator or administrator with restricted privileges working in a group you are not a member of, except for private groups where this workflow is not possible, all containers (Projects, Datasets, Screens) created in OMERO.web in such group will belong to the user whose portfolio you are working with.
 
-    Also the links between the containers and their content will belong to that user. In case there are different owners of the container and of the linked content, then the created link will belong to the owner of the linked content.
+    For OMERO.web 5.8.0 or later, also the links between the containers and their content will belong to that user. In case there are different owners of the container and of the linked content, then the created link will belong to the owner of the linked content.
 
     This helps to retain the possibility for this user to manipulate their containers even though you created them.
 
