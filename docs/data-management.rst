@@ -165,7 +165,7 @@ For HCS data, you can create new Screens and link Plates to these Screens.
        |image2d|
 
 .. warning::
-    **The ``Copy Link`` feature will not create a new independent copy of the Images.** There is no possibility to copy Images in OMERO at the moment in a way resulting in a new independent copy. The only thing that is copied during the actions above is the link between the Images and the Dataset. A single Image becomes linked to two Datasets.
+    **The ``Copy Link`` feature will not create a new independent copy of the Images.** The only possiblity how to create a fully independent copy in OMERO is to use the :ref:`Duplicate feature<Duplicatecli>`. The only thing that is copied during the actions above is the link between the Images and the Dataset. A single Image becomes linked to two Datasets.
     
     If you delete one of the Datasets, any Images within it that are linked to other Datasets will be retained. Nevertheless, if **you directly select and delete an Image that has been copied from another Dataset it will be deleted and lost from both Datasets.** There is a clear warning in the OMERO.web when you try to delete such doubly-linked Image, see screenshot below.
 
@@ -231,6 +231,8 @@ Typically an administrator works on behalf of other users in a group where the a
 #. Follow further the steps described in the section ``Move data between groups: owners of data`` above, taking note of the ``Not included`` objects.
 
 #. When creating new Datasets or Projects during the move, note that these containers will belong to the owner of the data, not yourself. Also the links between the new containers and the moved data will belong to the owner of the data. This should help to facilitate a smooth workflow, retaining the data handling possibilities such as reorganizing the data, renaming the containers you created for them etc. for the owner of the data. 
+
+.. _Duplicatecli:
 
 *Command Line: Duplicating objects*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
