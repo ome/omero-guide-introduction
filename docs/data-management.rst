@@ -306,7 +306,7 @@ Step-by-Step
 
    $ omero logout
    $ omero login -u user-1 -g read-only-group
-   $ omero duplicate Dataset:$ID1,$ID2 --ignore-classes=DatasetAnnotationLink,ImageAnnotationLink,Roi --report
+   $ omero duplicate Dataset:$ID1,$ID2 --ignore-classes=IAnnotationLink,Roi --report
 
 .. note::
     You must log in to the group where the data are, either by virtue of this group being your default group or by using the `-g` flag as shown in the examples above, otherwise the `omero-cli-duplicate` plugin will not find the data. This is a current limitation.
