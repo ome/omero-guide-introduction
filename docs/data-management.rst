@@ -296,7 +296,7 @@ Step-by-Step
 
 #. Find the duplicated Images in the Orphaned Images and Drag and Drop them into a Dataset or create a new Dataset for them.
 
-#. Dupliacte two Projects of another user in read-annotate group type. The group name in our example below is `read-annotate-group`. Log in as `user-1` and duplicate Projects belonging to `user-2` in that group. Further, instead of duplicating all the annotations of `user-2`, link all the original annotations such as Tags, Key-Value pairs and FileAnnotations of `user-2` to the corresponding objects in the duplicate, and duplicate only Comments and Ratings. The duplicate and Comments and Ratings on it will belong to `user-1`, but the other annotations will still belong to `user-2`. Run::
+#. Duplicate two Projects of another user in read-annotate group type. The group name in our example below is `read-annotate-group`. Log in as `user-1` and duplicate Projects belonging to `user-2` in that group. Further, instead of duplicating all the annotations of `user-2`, link all the original annotations such as Tags, Key-Value pairs and FileAnnotations of `user-2` to the corresponding objects in the duplicate, and duplicate only Comments and Ratings. The duplicate and Comments and Ratings on it will belong to `user-1`, but the other annotations will still belong to `user-2`. Run::
 
    $ omero logout
    $ omero login -u user-1 -g read-annotate-group
