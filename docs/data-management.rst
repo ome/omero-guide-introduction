@@ -165,7 +165,7 @@ For HCS data, you can create new Screens and link Plates to these Screens.
        |image2d|
 
 .. warning::
-    **The ``Copy Link`` feature will not create a new independent copy of the Images.** The only way to create a fully independent copy in OMERO is to use the :ref:`Duplicate feature<Duplicatecli>`. The only thing that is copied during the actions above is the link between the Images and the Dataset. A single Image becomes linked to two Datasets.
+    **The ``Copy Link`` feature will only create new links between an Image and a Dataset, so that one Image becomes linked to multiple Datasets. This does not create a new independent copy of the Image.** The only way to create a fully independent copy in OMERO is to use the :ref:`Duplicate feature<Duplicatecli>`.
     
     If you delete one of the Datasets, any Images within it that are linked to other Datasets will be retained. Nevertheless, if **you directly select and delete an Image that has been copied from another Dataset it will be deleted and lost from both Datasets.** There is a clear warning in the OMERO.web when you try to delete such doubly-linked Image, see screenshot below.
 
