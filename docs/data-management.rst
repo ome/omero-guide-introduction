@@ -237,7 +237,7 @@ Typically an administrator works on behalf of other users in a group where the a
 *Command Line: Duplicating objects*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can duplicate objects in OMERO. The functionality is available only on the CLI for now. The duplication creates a fully independent duplicate of the duplicated object and, when desired, the objects linked to the duplicated object as well. When the duplicate is later deleted, it will not have an influence on the original, which stays preserved. Similarly, when the original is later deleted, the duplicate stays preserved as well.
+You can duplicate objects in OMERO. The functionality is available only on the CLI for now. The duplication creates a full copy of the objects as if they were created independently. When desired, the newly duplicated objects can additionally be linked to other objects. When the duplicate is later deleted, it will not have an influence on the original, which stays preserved. Similarly, when the original is later deleted, the duplicate stays preserved as well.
 
 In case of Image objects, which have image files linked, the duplication creates a new image file which is linked to the original image file by a hard link. This means every duplication of an Image increases the number of hard links on the image file in Managed Repository of OMERO, but does not duplicate the image file itself, and thus does not increase the storage demands too much. 
 
