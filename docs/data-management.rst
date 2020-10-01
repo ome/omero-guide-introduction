@@ -292,7 +292,7 @@ Step-by-Step
 
 #. Duplicate two Images with many ROIs on them. The ROIs duplication might take a long time. To exclude the duplication of the ROIs, run::
 
-   $ omero duplicate Image:$ID1,$ID2 --ignore-classes=Roi --report 
+   $ omero duplicate Image:$ID1,$ID2 --ignore Roi --report
 
 #. Find the duplicated Images in the Orphaned Images and Drag and Drop them into a Dataset or create a new Dataset for them.
 
@@ -300,13 +300,13 @@ Step-by-Step
 
    $ omero logout
    $ omero login -u user-1 -g read-annotate-group
-   $ omero duplicate Project:$ID1,$ID2 --reference-classes=Annotation --duplicate-classes=CommentAnnotation,LongAnnotation --report
+   $ omero duplicate Project:$ID1,$ID2 --reference Annotation --duplicate CommentAnnotation,LongAnnotation --report
 
 #. Duplicate two Projects of another user in read-only group type. The group name in our example below is `read-only-group`. If the duplicator is not an administrator, administrator with restricted privileges or group owner, they cannot link the annotations of another user to their duplicate in a read-only group. They might duplicate all the annotations or exclude the duplication of all the annotations by excluding the Link duplication to the relevant objects as shown below. Run::
 
    $ omero logout
    $ omero login -u user-1 -g read-only-group
-   $ omero duplicate Dataset:$ID1,$ID2 --ignore-classes=IAnnotationLink,Roi --report
+   $ omero duplicate Project:$ID1,$ID2 --ignore IAnnotationLink,Roi --report
 
 .. note::
     You must log in to the group where the data are, either by virtue of this group being your default group or by using the `-g` flag as shown in the examples above, otherwise the `omero-cli-duplicate` plugin will not find the data. This is a current limitation.
