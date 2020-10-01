@@ -6,6 +6,9 @@ such as browsing, navigating to others’ data, and changing the display
 of the images in OMERO. The example here uses OMERO.web, but majority of
 the features described here are also present in OMERO.insight.
 
+Further, we show how to use the Command Line Interface (CLI) for data management,
+introducting mainly the features which are not present in the OMERO.web.
+
 Description
 -----------
 
@@ -28,6 +31,9 @@ We will show:
 
 -  How to move the data between groups if you are an administrator working on behalf of others.
 
+-  How to use Command Line for duplicating objects such as Images, Datasets or Projects.
+
+-  How to use Command Line for changing the ownership of objects.
 
 Setup
 -----
@@ -159,7 +165,7 @@ For HCS data, you can create new Screens and link Plates to these Screens.
        |image2d|
 
 .. warning::
-    **The ``Copy Link`` feature will not create a new independent copy of the Images.** There is no possibility to copy Images in OMERO at the moment in a way resulting in a new independent copy. The only thing that is copied during the actions above is the link between the Images and the Dataset. A single Image becomes linked to two Datasets.
+    **The ``Copy Link`` feature will only create new links between an Image and a Dataset, so that one Image becomes linked to multiple Datasets. This does not create a new independent copy of the Image.** The only way to create a fully independent copy in OMERO is to use the :ref:`Duplicate feature<Duplicatecli>`.
     
     If you delete one of the Datasets, any Images within it that are linked to other Datasets will be retained. Nevertheless, if **you directly select and delete an Image that has been copied from another Dataset it will be deleted and lost from both Datasets.** There is a clear warning in the OMERO.web when you try to delete such doubly-linked Image, see screenshot below.
 
@@ -225,6 +231,87 @@ Typically an administrator works on behalf of other users in a group where the a
 #. Follow further the steps described in the section ``Move data between groups: owners of data`` above, taking note of the ``Not included`` objects.
 
 #. When creating new Datasets or Projects during the move, note that these containers will belong to the owner of the data, not yourself. Also the links between the new containers and the moved data will belong to the owner of the data. This should help to facilitate a smooth workflow, retaining the data handling possibilities such as reorganizing the data, renaming the containers you created for them etc. for the owner of the data. 
+
+.. _Duplicatecli:
+
+*Command Line: Duplicating objects*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can duplicate objects in OMERO. The functionality is available only on the CLI for now. The duplication creates a full copy of the objects as if they were created independently. When desired, the newly duplicated objects can additionally be linked to other objects. When the duplicate is later deleted, it will not have an influence on the original, which stays preserved. Similarly, when the original is later deleted, the duplicate stays preserved as well.
+
+In case of Image objects, which have image files linked, the duplication creates a new image file which is linked to the original image file by a hard link. This means every duplication of an Image increases the number of hard links on the image file in Managed Repository of OMERO, but does not duplicate the image file itself, and thus does not increase the storage demands too much. 
+
+In case of File Attachment objects though, which also have files to them, each duplication will duplicate the linked file, thus doubling the storage space necessary for these File Attachment files.
+
+Resources
+---------
+
+-  Necessary software versions:
+
+   - **OMERO.server 5.6.3 or later**
+   - **omero-cli-duplicate plugin 0.4.0 or later**
+
+-  Documentation:
+
+   - `README of the omero-cli-duplicate repository <https://github.com/ome/omero-cli-duplicate/blob/master/README.rst>`_
+
+   - `Application Programming Interface documentation <https://docs.openmicroscopy.org/omero-blitz/5.5.7/slice2html/omero/cmd/Duplicate.html>`_
+
+-  Plugin for duplication on Command Line:
+
+   - `omero-cli-duplicate on PyPI <https://pypi.org/project/omero-cli-duplicate/#description>`_
+
+
+Setup
+-----
+
+**Duplicate plugin installation**
+
+- Go to the environment where you installed your OMERO.cli as specified under -  https://docs.openmicroscopy.org/latest/omero/users/cli/installation.html.
+
+- Activate the virtual environment.
+
+- Run::
+    
+   $ pip install omero-cli-duplicate
+
+Step-by-Step
+------------
+
+#. On your local machine, open a terminal
+
+#. Activate the virtual environment where ``omero-py`` is installed or add it to ``PATH`` e.g.::
+    
+   $ export PATH=/opt/omero/server/venv3/bin:$PATH
+
+#. The variables ``$ID​1`` and ``$ID2`` below are the IDs of the ​selected Datasets. To duplicate two Datasets with their Images and annotations on both the Images and the Datasets, run::
+    
+   $ ​omero duplicate Dataset:$ID1,$ID2 --report
+
+#. The duplicated Datasets will not be linked to any Project, even if the originals were linked to some Project. 
+
+#. Duplicate two Images with many ROIs on them. The ROIs duplication might take a long time. To exclude the duplication of the ROIs, run::
+
+   $ omero duplicate Image:$ID1,$ID2 --ignore-classes=Roi --report 
+
+#. Find the duplicated Images in the Orphaned Images and Drag and Drop them into a Dataset or create a new Dataset for them.
+
+#. Duplicate two Projects of another user in read-annotate group type. The group name in our example below is `read-annotate-group`. Log in as `user-1` and duplicate Projects belonging to `user-2` in that group. Further, instead of duplicating all the annotations of `user-2`, link all the original annotations such as Tags, Key-Value pairs and FileAnnotations of `user-2` to the corresponding objects in the duplicate, and duplicate only Comments and Ratings. The duplicate and Comments and Ratings on it will belong to `user-1`, but the other annotations will still belong to `user-2`. Run::
+
+   $ omero logout
+   $ omero login -u user-1 -g read-annotate-group
+   $ omero duplicate Project:$ID1,$ID2 --reference-classes=Annotation --duplicate-classes=CommentAnnotation,LongAnnotation --report
+
+#. Duplicate two Projects of another user in read-only group type. The group name in our example below is `read-only-group`. If the duplicator is not an administrator, administrator with restricted privileges or group owner, they cannot link the annotations of another user to their duplicate in a read-only group. They might duplicate all the annotations or exclude the duplication of all the annotations by excluding the Link duplication to the relevant objects as shown below. Run::
+
+   $ omero logout
+   $ omero login -u user-1 -g read-only-group
+   $ omero duplicate Dataset:$ID1,$ID2 --ignore-classes=IAnnotationLink,Roi --report
+
+.. note::
+    You must log in to the group where the data are, either by virtue of this group being your default group or by using the `-g` flag as shown in the examples above, otherwise the `omero-cli-duplicate` plugin will not find the data. This is a current limitation.
+
+    If you intend to move the duplicate into a different group, it is recommended that you duplicate the annotations as well. If you link the annotations from other objects to your duplicates, the link might be cut during the subsequent move of that duplicate to another group.
 
 .. |image0| image:: images/management1.png
    :height: 3.4592in
