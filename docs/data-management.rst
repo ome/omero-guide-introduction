@@ -302,7 +302,7 @@ Step-by-Step
    $ omero login -u user-1 -g read-annotate-group
    $ omero duplicate Project:$ID1,$ID2 --reference Annotation --duplicate CommentAnnotation,LongAnnotation --report
 
-#. Duplicate two Projects of another user in read-only group type. The group name in our example below is `read-only-group`. If the duplicator is not an administrator, administrator with restricted privileges or group owner, they cannot link the annotations of another user to their duplicate in a read-only group. They might duplicate all the annotations or exclude the duplication of all the annotations by excluding the Link duplication to the relevant objects as shown below. Run::
+#. Duplicate two Projects of another user in read-only group type. The group name in our example below is `read-only-group`. If the duplicator is not an administrator, administrator with restricted privileges or group owner, they cannot link the annotations of another user to their duplicate in a read-only group. They might duplicate all the annotations (this is the default behaviour) or exclude the duplication of all the annotations by excluding the Link duplication to the relevant objects as shown below. Run::
 
    $ omero logout
    $ omero login -u user-1 -g read-only-group
