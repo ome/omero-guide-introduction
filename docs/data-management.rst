@@ -269,7 +269,9 @@ Setup
 
 - Go to the environment where you installed your OMERO.cli as specified under -  https://docs.openmicroscopy.org/latest/omero/users/cli/installation.html.
 
-- Activate the virtual environment.
+- Activate the virtual environment where ``omero-py`` is installed or add it to ``PATH`` e.g.::
+ 
+   $ export PATH=/opt/omero/server/venv3/bin:$PATH
 
 - Run::
     
@@ -280,9 +282,7 @@ Step-by-Step
 
 #. On your local machine, open a terminal
 
-#. Activate the virtual environment where ``omero-py`` is installed or add it to ``PATH`` e.g.::
-    
-   $ export PATH=/opt/omero/server/venv3/bin:$PATH
+#. Activate the virtual environment as indicated in the Setup section above.
 
 #. The variables ``$ID​1`` and ``$ID2`` below are the IDs of the ​selected Datasets. To duplicate two Datasets with their Images and annotations on both the Images and the Datasets, run::
     
