@@ -320,7 +320,7 @@ between the groups you are a member of.
    |image5|
 
 #. Check both lists. Please read the note above about which objects are
-   typically not included and reconsider the ``Move`` action again.
+   typically not included and reconsider the ``Move`` action.
    The ``not included`` objects will not be linked to the ``Moved``
    objects anymore if you go ahead with the move, the linkage will be lost.
 
