@@ -456,13 +456,14 @@ Step-by-Step
 #. Duplicate two Projects of another user in read-annotate group type.
    This will duplicate also the Datasets linked to those Projects
    as welll as Images linked to those Datasets. 
-   Here we specify some reference classes of objects that
-   we do not want to duplicate, even though they are linked to the objects
+   Here we specify some classes of objects that
+   we do not want to duplicate (`reference-classes`),
+   even though they are linked to the objects
    we are duplicating. Instead, the duplicated objects
    will be linked to these `reference-classes` of objects. 
    We can also specify classes that we explicitly do want to duplicate
    using the `duplicate` argument. In this example,
-   we specify all Annotations as reference-classes,
+   we specify all Annotations as `reference-classes`,
    but a subset of these (Comments and LongAnnotations such as Ratings)
    are `duplicate-classes`. This means that the duplicated Projects
    will be linked to the original annotations such as Tags,
