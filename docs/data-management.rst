@@ -378,7 +378,7 @@ In case of Image objects, which have image files linked,
 the duplication creates a new image file which is linked
 to the original image file by a hard link. This means every
 duplication of an Image increases the number of hard links
-on the image file in Managed Repository of OMERO,
+on the image file in OMERO.server's Managed Repository,
 but does not duplicate the image file itself,
 and thus does not increase the storage demands too much. 
 
