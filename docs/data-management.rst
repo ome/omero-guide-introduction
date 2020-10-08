@@ -463,7 +463,9 @@ Step-by-Step
    Key-Value pairs and FileAnnotations, but Comments and Ratings
    will be duplicated. This can be useful to ensure that a single
    Comment is not attached to multiple objects which might cause confusion
-   when the comment is edited. The duplicated Annotations
+   when the Comment is edited. Also it prevents a loss of link
+   between the Comment and an object in case that object gets moved
+   into another group after the duplication. The duplicated Annotations
    and the two Projects with the linked Datasets and Images will belong
    to the current user (`user-1`), even if all the original Annotations
    may belong to other users in the read-annotate group. Run::
