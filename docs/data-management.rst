@@ -98,7 +98,7 @@ Browsing and rendering
 
 #. To see other people’s data, click on the (for example ``Lab1``) group name
    in the top-left corner of the webclient. Note that in case
-   you are in a differently named group, the name in the top left corner
+   you are in a differently named group, the name in the top-left corner
    will accordingly reflect this. 
    Then use the menu to select the name of the group
    you wish to browse and then the user inside that group
