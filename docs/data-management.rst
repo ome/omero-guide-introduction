@@ -288,7 +288,7 @@ which are moved will be deleted.
 Further, if any objects are moved,
 the links to any annotations
 (such as ``Tags`` or attached ``File annotations``)
-linked to these objects will be severed in case these
+linked to these objects will be deleted in case these
 annotations belong to others or in case these annotations belong
 to you but are also linked to some other objects
 in the original group which are not being moved.
@@ -498,7 +498,7 @@ Step-by-Step
     If you intend to move the duplicate into a different group,
     it is recommended that you duplicate the annotations as well.
     If you link the annotations from other objects to your
-    duplicates, the link might be cut during the subsequent
+    duplicates, the link might be deleted during the subsequent
     move of that duplicate to another group.
 
 .. |image0| image:: images/management1.png
