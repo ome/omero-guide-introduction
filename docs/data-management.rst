@@ -357,7 +357,7 @@ not yet available in the Command Line Interface).
    not yourself. Also the links between the new containers
    and the moved data will belong to the owner of the data. 
    This should help to facilitate a smooth workflow,
-   retaining the data handling possibilities such as reorganizing the data,
+   retaining data-handling possibilities such as reorganizing the data,
    renaming the containers you created for them etc. for the owner of the data. 
 
 .. _Duplicatecli:
