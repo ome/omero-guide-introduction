@@ -232,7 +232,7 @@ For HCS data, you can create new Screens and link Plates to these Screens.
     that has been copied from another 
     Dataset it will be deleted and lost from both Datasets.**
     There is a clear warning in the OMERO.web
-    when you try to delete such doubly-linked Image, see screenshot below.
+    when you try to delete such a doubly linked Image, see screenshot below.
 
 
 |image2e|
