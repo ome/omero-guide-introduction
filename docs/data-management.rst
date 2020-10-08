@@ -298,6 +298,8 @@ it might be worth in some situations to consider moving data
 between groups using the Command Line Interface see
 `CLI Moving Objects between Groups <https://docs.openmicroscopy.org/omero/latest/users/cli/chgrp.html>`_.
 
+.. _Moveownders:
+
 Move data between groups: owners of data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -349,8 +351,8 @@ not yet available in the Command Line Interface).
 #. Right-click and select ``Move to Group...``.
 
 #. Follow further the steps described in the section
-   ``Move data between groups: owners of data`` above, taking note of the
-   ``Not included`` objects.
+   :ref:`Move data between groups: owners of data <Moveownders>`,
+   taking note of the ``Not included`` objects.
 
 #. When creating new Datasets or Projects during the move,
    note that these containers will belong to the owner of the data, 
