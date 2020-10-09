@@ -455,7 +455,7 @@ Step-by-Step
 
 #. Duplicate two Projects of another user in read-annotate group type.
    This will duplicate also the Datasets linked to those Projects
-   as welll as Images linked to those Datasets. 
+   as well as Images linked to those Datasets. 
    Here we specify some classes of objects that
    we do not want to duplicate (`reference-classes`),
    even though they are linked to the objects
