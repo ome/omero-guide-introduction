@@ -70,10 +70,10 @@ Further, if one user deletes their own data in OMERO (please do not
 delete anything on our server), this will not have any bearing on the
 other 49 sets of Images belonging to the 49 other users.
 
-The login names of the 50 users are “user-x” where x goes from 1 to 50.
+The login names of the 50 users are "user-x" where x goes from 1 to 50.
 We have given to each of the 50 users in OMERO a unique first name and
 surname which we picked from a list of 50 famous scientists e.g. Ada
-Lovelace or Francis Crick. This is the name (“your” name) which you will
+Lovelace or Francis Crick. This is the name ("your" name) which you will
 see in the top-right corner of the OMERO webclient after
 you log in with your loginname.
 
@@ -92,7 +92,7 @@ Browsing and rendering
    belonging to other users. 
    Permissions are managed by users with admin privileges. 
    To highlight some of the collaborative aspects of OMERO,
-   we will use a “Read-Annotate” group. 
+   we will use a "Read-Annotate" group. 
    This implies that users **can** view and annotate
    each other’s data but **cannot** delete other people’s data.
 
@@ -106,7 +106,7 @@ Browsing and rendering
 
    \ |image0|
 
-#.  You can browse ‘folders’ in the left-hand pane: 
+#.  You can browse 'folders' in the left-hand pane: 
     Image folders are called Datasets and they are within Projects.
 
 #.  When a Dataset is selected, Image thumbnails are shown
@@ -125,9 +125,9 @@ Browsing and rendering
 #.  For HCS data, the layout of the OMERO.web is a bit different.
     The HCS data are usually organized in following manner:
 
-    - ``Images`` are contained in ``Wells``
+    - ``Images`` are contained in ``Wells``.
 
-    - ``Wells`` are contained in ``Plates``
+    - ``Wells`` are contained in ``Plates``.
 
     - ``Plates`` are organized in ``Screens``.
 
@@ -147,9 +147,8 @@ Browsing and rendering
     metadata read by Bio-Formats and stored in a relational database
     is displayed:
 
-    - core metadata in the ``General`` tab
-
-    - additional metadata in the ``Acquisition`` tab. 
+    - Core metadata in the ``General`` tab.
+    - Additional metadata in the ``Acquisition`` tab. 
     - All the metadata read by Bio-Formats can be downloaded at any time.
 
 #. In the ``Preview`` tab in the right-hand panel,
@@ -165,7 +164,7 @@ Browsing and rendering
 
 #. You can adjust the rendering settings for each channel
    e.g. turn on/off the channels, adjust color settings,
-   look-up tables, etc..
+   look-up tables, etc.
 
 #. The rendering settings can be saved to the server. 
    This **never** changes the original Image data and
@@ -192,7 +191,7 @@ Browsing and rendering
 
    - Select any image inside that Dataset and click on the pencil |image16| icon in the right-hand pane next to Channels.
 
-   - Input “DAPI” instead of channel “457” and “GFP”, “Aurora-B” and “CY-6” for the other channels.
+   - Input "DAPI" instead of channel "457" and "GFP", "Aurora-B" and "CY-6" for the other channels.
 
    - Click the ``Apply to All`` button |image17| and confirm by clicking ``Continue``. This will change the channel names of all the images in that Dataset.
 
@@ -211,9 +210,9 @@ For HCS data, you can create new Screens and link Plates to these Screens.
 
 #. Copy Images using the right-click context menu: 
      - Select the Images to be copied, then right-click
-       and click ``Edit > Copy Link``
+       and click ``Edit > Copy Link``.
      - Select the Dataset you want to copy the Images to,
-       right-click and click on ``Edit > Paste Link``
+       right-click and click on ``Edit > Paste Link``.
 
        |image2d|
 
@@ -287,7 +286,7 @@ which are moved will be deleted.
 
 Further, if any objects are moved,
 the links to any annotations
-(such as ``Tags`` or attached ``File annotations``)
+such as ``Tags`` or attached ``File annotations``
 linked to these objects will be deleted in case these
 annotations belong to others or in case these annotations belong
 to you but are also linked to some other objects
