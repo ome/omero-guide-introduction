@@ -363,8 +363,8 @@ not yet available in the Command Line Interface).
 
 .. _Duplicatecli:
 
-*Command Line: Duplicating objects*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Command Line: Duplicating objects
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can duplicate objects in OMERO. The functionality is available only
 on the CLI for now. The duplication creates a full copy of the objects
