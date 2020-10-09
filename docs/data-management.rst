@@ -405,7 +405,7 @@ Resources
 
    - `README of the omero-cli-duplicate repository <https://github.com/ome/omero-cli-duplicate/blob/master/README.rst>`_
 
-   - `Application Programming Interface documentation <https://docs.openmicroscopy.org/omero-blitz/5.5.7/slice2html/omero/cmd/Duplicate.html>`_
+   - `Application Programming Interface documentation <https://docs.openmicroscopy.org/omero-blitz/5.5.8/slice2html/omero/cmd/Duplicate.html>`_
 
 -  Plugin for duplication on Command Line:
 
