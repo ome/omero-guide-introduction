@@ -417,7 +417,7 @@ Setup
 
 **Duplicate plugin installation**
 
-- Go to the environment where you installed your OMERO.cli as specified under -  https://docs.openmicroscopy.org/latest/omero/users/cli/installation.html.
+- Go to the environment where you installed your OMERO.cli as specified under `Installation <https://docs.openmicroscopy.org/latest/omero/users/cli/installation.html>`__.
 
 - Activate the virtual environment where ``omero-py`` is installed or add it to ``PATH`` e.g.::
  
