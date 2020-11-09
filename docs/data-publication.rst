@@ -22,10 +22,9 @@ Setup
 
 OMERO.server has been installed and provisioned using an `Ansible playbook <https://github.com/ome/prod-playbooks/blob/master/omero/training-server/playbook.yml>`_.
 
-OMERO.server configurations for publication are described in the following chapters of `the publication in OMERO documentation <https://docs.openmicroscopy.org/omero/latest/sysadmins/public.html>`_:
+OMERO.server configurations for publication are described in the following chapter of `the publication in OMERO documentation <https://docs.openmicroscopy.org/omero/latest/sysadmins/public.html>`_:
 
 - `Configuring public user <https://docs.openmicroscopy.org/omero/latest/sysadmins/public.html#configuring-public-user>`_.
-- `Reusing OMERO sessions <https://docs.openmicroscopy.org/omero/latest/sysadmins/public.html#reusing-omero-sessions>`_.
 
 Resources
 ---------
