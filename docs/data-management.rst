@@ -508,6 +508,8 @@ Step-by-Step
     duplicates, the link might be deleted during the subsequent
     move of that duplicate to another group.
 
+    Duplicating and moving the data into another group as described above is the recommended way you cab share objects in OMERO with users who are not members of the group where the data are located. Please **do not use the** ``Shares``  tab |image6| above the left-hand pane in OMERO.web to create new Shares as this feature is deprecated and not supported and tested any more. The deprecation warning will be added to OMERO.web in future.
+
 .. |image0| image:: images/management1.png
    :height: 3.4592in
 .. |image1| image:: images/management2.png
@@ -528,6 +530,8 @@ Step-by-Step
    :height: 2.4592in
 .. |image5| image:: images/management6.png
    :height: 4.9in
+.. |image6| image:: images/management7.png
+   :height: 0.4in
 .. |image16| image:: images/management16.png
    :width: 0.22917in
    :height: 0.1875in
