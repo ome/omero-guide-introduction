@@ -393,6 +393,8 @@ which also have files to them, each duplication will
 duplicate the linked file, thus doubling the storage
 space necessary for these File Attachment files.
 
+Use this Duplicate feature to :ref:`replace the deprecated Shares feature<Shares>`.
+
 Resources
 ---------
 
@@ -508,7 +510,12 @@ Step-by-Step
     duplicates, the link might be deleted during the subsequent
     move of that duplicate to another group.
 
-    Duplicating and moving the data into another group as described above is the recommended way you cab share objects in OMERO with users who are not members of the group where the data are located. Please **do not use the** ``Shares``  tab |image6| above the left-hand pane in OMERO.web to create new Shares as this feature is deprecated and not supported and tested any more. The deprecation warning will be added to OMERO.web in future.
+.. _Shares:
+
+Shares are deprecated
+~~~~~~~~~~~~~~~~~~~~~
+
+Duplicating and moving the data into another group as described in :ref:`Duplicate feature<Duplicatecli>` is the recommended way you cab share objects in OMERO with users who are not members of the group where the data are located. Please **do not use the** ``Shares``  tab |image6| above the left-hand pane in OMERO.web to create new Shares as this feature is deprecated and not supported and tested any more. The deprecation warning will be added to OMERO.web in future.
 
 .. |image0| image:: images/management1.png
    :height: 3.4592in
