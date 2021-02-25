@@ -515,9 +515,9 @@ Step-by-Step
 Shares (discontinued feature)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Previously created Shares can still be viewed in the ``Shares`` tab |image6| above the left-hand side pane of OMERO.web. Nevertheless, the Shares feature is discontinued. **It is not posssible to use the** ``World`` icon |image7| above the left-hand pane in OMERO.web to create new Shares anymore. Shares have been deprecated in OMERO 5.3.0 and are discontinued in OMERO.web xxx and later. The current best suggestion to replace Shares is moving the data into another group as described in :ref:`Duplicate feature<Duplicatecli>`. Nevertheless, the :ref:`Duplicate feature<Duplicatecli>` has following limitations:
+Previously created Shares can still be viewed in the ``Shares`` tab |image6| above the left-hand side pane of OMERO.web. Nevertheless, the Shares feature is discontinued. **It is not posssible to use the** ``World`` icon |image7| above the left-hand pane in OMERO.web to create new Shares anymore. Shares have been deprecated in OMERO 5.3.0 and are discontinued in OMERO.web xxx and later. You need to use the OMERO standard permissions to share Images, by :ref:`moving the data<Movedowners>` into the appropriate group. If you also want to retain the Images in their current group, you can first duplicate them as described in :ref:`Duplicate feature<Duplicatecli>`. Nevertheless, this :ref:`Duplicate<Duplicatecli>` and :ref:`Move<Movedowners>` workflow has following limitations:
 
- - Only available on the Command Line Interface (CLI)
+ - :ref:`Duplicate<Duplicatecli>` is only available on the Command Line Interface (CLI)
  - You need to already be in a non-private group with the user you wish to share with
  - You will also be sharing the data with all the other members of that group
 
