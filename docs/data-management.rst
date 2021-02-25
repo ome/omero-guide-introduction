@@ -393,7 +393,7 @@ which also have files to them, each duplication will
 duplicate the linked file, thus doubling the storage
 space necessary for these File Attachment files.
 
-Use this Duplicate feature to :ref:`replace the deprecated Shares feature<Shares>`.
+Use this Duplicate feature to :ref:`replace the discontinued Shares feature<Shares>`.
 
 Resources
 ---------
@@ -512,10 +512,14 @@ Step-by-Step
 
 .. _Shares:
 
-Shares are deprecated
-~~~~~~~~~~~~~~~~~~~~~
+Shares (discontinued feature)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Duplicating and moving the data into another group as described in :ref:`Duplicate feature<Duplicatecli>` is the recommended way you can share objects in OMERO with users who are not members of the group where the data are located. Please **do not use the** ``Shares``  tab |image6| above the left-hand pane in OMERO.web to create new Shares as this feature is deprecated and not supported and tested any more. The deprecation warning will be added to OMERO.web in future.
+Previously created Shares can still be viewed in the ``Shares`` tab |image6| above the left-hand side pane of OMERO.web. Nevertheless, the Shares feature is discontinued. **It is not posssible to use the** ``World`` icon |image7| above the left-hand pane in OMERO.web to create new Shares anymore. Shares have been deprecated in OMERO 5.3.0 and are discontinued in OMERO.web xxx and later. The current best suggestion to replace Shares is moving the data into another group as described in :ref:`Duplicate feature<Duplicatecli>`. Nevertheless, the :ref:`Duplicate feature<Duplicatecli>` has following limitations:
+
+ - Only available on the Command Line Interface (CLI)
+ - You need to already be in a non-private group with the user you wish to share with
+ - You will also be sharing the data with all the other members of that group
 
 .. |image0| image:: images/management1.png
    :height: 3.4592in
@@ -538,6 +542,8 @@ Duplicating and moving the data into another group as described in :ref:`Duplica
 .. |image5| image:: images/management6.png
    :height: 4.9in
 .. |image6| image:: images/management7.png
+   :height: 0.4in
+.. |image7| image:: images/management8.png
    :height: 0.4in
 .. |image16| image:: images/management16.png
    :width: 0.22917in
