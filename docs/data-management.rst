@@ -292,7 +292,9 @@ annotations belong to others or in case these annotations belong
 to you but are also linked to some other objects
 in the original group which are not being moved.
 
-If you want to retain a copy of your data in its current position, then you should :ref:`Duplicate<Duplicatecli>` it first. The :ref:`Duplication<Duplicatecli>` also bypasses the unlinked annotations problem highlighted in the previous paragraph. Because the :ref:`Duplicate feature<Duplicatecli>` creates new objects, which are not dependent on the originals, the relationships between these duplicates are then preserved even during a subsequent move to another group.
+If you want to retain a copy of your data in its current position, then you should :ref:`Duplicate<Duplicatecli>` it first.
+The :ref:`Duplication<Duplicatecli>` also bypasses the unlinked annotations problem highlighted in the previous paragraph.
+Because the :ref:`Duplicate feature<Duplicatecli>` creates new objects, which are not dependent on the originals, the relationships between these duplicates are then preserved even during a subsequent move to another group.
 
 Note that except for using OMERO.web described below,
 it might be worth in some situations to consider moving data
