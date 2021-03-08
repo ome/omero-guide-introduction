@@ -373,7 +373,7 @@ Change ownership of data
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Every object in OMERO has a single, particular user as an owner.
-The ownership of objects can be changed but only if you are an administrator, administrator with restricted privileges or a group owner.
+The ownership of objects can be changed but only if you are an Administrator, Administrator with restricted privileges or a Group owner.
 
 There is also a possibility of `changing ownership of objects <https://docs.openmicroscopy.org/omero/latest/users/cli/chown.html>`_ using the Command Line Interface. The Command Line Interface implementation contains some features not present in OMERO.web.
 
