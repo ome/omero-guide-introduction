@@ -292,6 +292,10 @@ annotations belong to others or in case these annotations belong
 to you but are also linked to some other objects
 in the original group which are not being moved.
 
+If you want to retain a copy of your data in its current position, then you should :ref:`Duplicate<Duplicatecli>` it first.
+The :ref:`Duplication<Duplicatecli>` also bypasses the unlinked annotations problem highlighted in the previous paragraph.
+Because the :ref:`Duplicate feature<Duplicatecli>` creates new objects, which are not dependent on the originals, the relationships between these duplicates are then preserved even during a subsequent move to another group.
+
 Note that except for using OMERO.web described below,
 it might be worth in some situations to consider moving data
 between groups using the Command Line Interface see
@@ -392,6 +396,8 @@ In case of File Attachment objects though,
 which also have files to them, each duplication will
 duplicate the linked file, thus doubling the storage
 space necessary for these File Attachment files.
+
+Use this Duplicate feature to :ref:`replace the discontinued Shares feature<Shares>`.
 
 Resources
 ---------
@@ -508,6 +514,17 @@ Step-by-Step
     duplicates, the link might be deleted during the subsequent
     move of that duplicate to another group.
 
+.. _Shares:
+
+Shares (discontinued feature)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Previously created Shares can still be viewed in the ``Shares`` tab |image6| above the left-hand side pane of OMERO.web. Nevertheless, the Shares feature is discontinued. **It is not posssible to use the** ``World`` icon |image7| above the left-hand pane in OMERO.web to create new Shares anymore. Shares are discontinued in OMERO.web 5.9.0 and later. You need to use the OMERO standard permissions to share Images, by :ref:`moving the data<Movedowners>` into the appropriate group. If you also want to retain the Images in their current group, you can first duplicate them as described in :ref:`Duplicate feature<Duplicatecli>`. Nevertheless, this :ref:`Duplicate<Duplicatecli>` and :ref:`Move<Movedowners>` workflow has following limitations:
+
+ - :ref:`Duplicate<Duplicatecli>` is only available on the Command Line Interface (CLI)
+ - You need to already be in a non-private group with the user you wish to share with
+ - You will also be sharing the data with all the other members of that group
+
 .. |image0| image:: images/management1.png
    :height: 3.4592in
 .. |image1| image:: images/management2.png
@@ -528,6 +545,10 @@ Step-by-Step
    :height: 2.4592in
 .. |image5| image:: images/management6.png
    :height: 4.9in
+.. |image6| image:: images/management7.png
+   :height: 0.4in
+.. |image7| image:: images/management8.png
+   :height: 0.4in
 .. |image16| image:: images/management16.png
    :width: 0.22917in
    :height: 0.1875in
