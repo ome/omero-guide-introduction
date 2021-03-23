@@ -27,13 +27,16 @@ We will show:
 
 -  How to organize Images in Projects and Datasets.
 
--  How to move the data between groups if you are data owner.
+-  How to :ref:`move the data between groups if you are data owner<Movedowners>`.
 
 -  How to move the data between groups if you are an administrator working on behalf of others.
 
--  How to use Command Line for duplicating objects such as Images, Datasets or Projects.
+-  How to :ref:`change the ownership of objects<Chown>`.
 
--  How to use Command Line for changing the ownership of objects.
+-  How to use :ref:`Command Line for duplicating objects<Duplicatecli>` such as Images, Datasets or Projects.
+
+
+
 
 Setup
 -----
@@ -52,6 +55,8 @@ Resources
 -  For import of Images, we use `in_place_import_as.sh <https://github.com/ome/training-scripts/blob/master/maintenance/scripts/in_place_import_as.sh>`_.
 
 -  The cooperation in OMERO is described in `Groups and permissions system <https://docs.openmicroscopy.org/latest/omero/sysadmins/server-permissions.html>`_.
+
+-  See also the documentation for `Moving objects between groups <https://docs.openmicroscopy.org/omero/latest/users/cli/chgrp.html>`_ and `Changing ownership of objects <https://docs.openmicroscopy.org/omero/latest/users/cli/chown.html>`_ using the Command Line Interface.
 
 Step-by-Step
 ------------
@@ -365,6 +370,43 @@ not yet available in the Command Line Interface).
    retaining data-handling possibilities such as reorganizing the data,
    renaming the containers you created for them etc. for the owner of the data. 
 
+
+.. _Chown:
+
+Change ownership of data
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Every object in OMERO has a single, particular user as an owner.
+The ownership of objects can be changed but only if you are an Administrator, Administrator with restricted privileges or a Group owner.
+
+There is also a possibility of `changing ownership of objects <https://docs.openmicroscopy.org/omero/latest/users/cli/chown.html>`_ using the Command Line Interface. The Command Line Interface implementation contains some features not present in OMERO.web.
+
+#. Select a Project, Dataset or Images in the left-hand side tree of OMERO.web.
+
+#. Right-click and in the context menu, select ``Change owner``.
+
+#. In the new dialog, select the new owner of the data. 
+
+#. Wait until the ``Checking which objects will be moved`` is done and the spinner vanishes. This might take time depending on the number of objects you are attempting to change owner of. For example, a large number of ROIs on the images can be a cause of longer waiting times.
+
+   |image18|
+
+#. Check the list of objects which are supposed to be transferred to the new owner. Also consider the possible loss of linkage between objects listed in the ``Will be removed from`` line.
+
+   |image19|
+
+#. Click ``OK``.
+
+#. Observe the ``Activities`` item above the central pane of OMERO.web and wait until the change of ownership is finished.
+
+   |image20|
+
+#. The ``Activities`` item will stop showing a spinner and a link to the data you have just changed the owner of will appear. This link will help you to find the data you just changed the ownership of. This data will be shown as a part of the tree of the new owner in the OMERO.web interface, and are now removed from the old owner tree.
+
+   |image21|
+
+#. Click on the link ``Show ...`` in the Activities and inspect the data you just transferred the ownership of.
+
 .. _Duplicatecli:
 
 Command Line: Duplicating objects
@@ -555,3 +597,11 @@ Previously created Shares can still be viewed in the ``Shares`` tab |image6| abo
 .. |image17| image:: images/management17.png
    :width: 0.78125in
    :height: 0.23958in
+.. |image18| image:: images/management18.png
+   :height: 0.5in
+.. |image19| image:: images/management19.png
+   :height: 5in
+.. |image20| image:: images/management20.png
+   :height: 1.05in
+.. |image21| image:: images/management21.png
+   :height: 1.2in
