@@ -25,7 +25,7 @@ Resources
 
 -  Documentation:
 
-   -  https://docs.openmicroscopy.org/omero/latest/developers/Modules/Search.html
+   -  `Search <https://docs.openmicroscopy.org/omero/latest/developers/Modules/Search.html>`_
 
 
 Setup
