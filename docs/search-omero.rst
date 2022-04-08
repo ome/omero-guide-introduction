@@ -20,6 +20,14 @@ We will show:
 
    -  How to combine search terms using AND NOT.
 
+Resources
+---------
+
+-  Documentation:
+
+   -  `Search <https://docs.openmicroscopy.org/omero/latest/developers/Modules/Search.html>`_
+
+
 Setup
 -----
 
