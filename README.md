@@ -1,7 +1,6 @@
 # User guide for OMERO.fpbioimage
 [![Documentation Status](https://readthedocs.org/projects/omero-guide-introduction/badge/?version=latest)](https://omero-guides.readthedocs.io/en/latest/introduction/docs/index.html)
 
-
 [![Actions Status](https://github.com/ome/omero-guide-introduction/workflows/sphinx/badge.svg)](https://github.com/ome/omero-guide-introduction/actions)
 
 The documentation is deployed at [General Introduction on OMERO](https://omero-guides.readthedocs.io/en/latest/introduction/docs/index.html).
