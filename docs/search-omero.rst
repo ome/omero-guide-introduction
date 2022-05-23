@@ -91,6 +91,7 @@ Considering the following setup of 12 separate images (image 1 through 12):
 10. Image 10 named ``uM`` with no Key-Value pairs
 11. Image 11 named ``H2B`` with no Key-Value pairs
 12. Image 12 named ``2`` with no Key-Value pairs
+13. Key ``H2B`` with Value ``2 uM`` on image 13.
 
 Basic **Search** tab:
    - ``GFP H2B:2 uM`` finds images 1,2,3,5,6,7,8,9,10. In that case, the query is interpreted as ``GFP`` OR ``H2B:2`` OR ``uM``.
@@ -108,6 +109,9 @@ Basic **Search** tab:
    - ``GFP^H2B:2^uM`` finds images 1,2,3,5,6,7,8,9,10.
    - ``GFP`` finds images 1,2,5,6,7,8,9.
    - ``GFP`` with checkbox ``Name`` under ``Restricted by Field`` section checked finds image 9.
+   - ``GFP*:2 uM`` throws an error. Do not use wildcards in Keys !
+   - ``H2B:*`` finds images 3,4,13. The wildcard can be used in Values.
+   - ``H2B:2*`` finds images 3,13. 
 
 **Advanced** tab:
    - ``GFP^H2B:2^uM`` and ``GFP^H2B:2 uM`` throw an error in ``Advanced`` tab. This is due to the different interpretation of the ``^`` character between the basic ``Search`` and ``Advanced`` tabs.
