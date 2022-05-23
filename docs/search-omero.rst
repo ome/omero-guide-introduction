@@ -77,21 +77,67 @@ Step-by-Step
 Key-Value pairs search examples
 -------------------------------
 
-Considering the following setup of 12 separate images (image 1 through 12):
+Considering the following setup of 13 separate images:
 
-1. Key ``GFP H2B`` with Value ``2 uM`` on image 1
-2. Key ``GFP^H2B`` with Value ``2 uM`` on image 2
-3. Key ``H2B`` with Value ``2`` on image 3
-4. Key ``H2B`` with Value ``4`` on image 4
-5. Key ``GFP-H2B`` with Value ``2-uM`` on image 5
-6. Key ``GFP-H2B`` with Value ``2 uM`` on image 6
-7. Key ``GFP_H2B`` with Value ``2_uM`` on image 7
-8. Key ``GFP^H2B`` with Value ``2^uM`` on image 8
-9. Image 9 named ``GFP`` with no Key-Value pairs
-10. Image 10 named ``uM`` with no Key-Value pairs
-11. Image 11 named ``H2B`` with no Key-Value pairs
-12. Image 12 named ``2`` with no Key-Value pairs
-13. Key ``H2B`` with Value ``2 uM`` on image 13.
+.. list-table:: Images with Key-Value pairs
+   :header-rows: 1
+
+   * - Image ID
+     - Image Name
+     - Key
+     - Value
+   * - 1
+     - Aurora1
+     - GFP H2B
+     - 2 uM
+   * - 2
+     - Aurora2
+     - GFP^H2B
+     - 2 uM
+   * - 3
+     - Aurora3
+     - H2B
+     - 2
+   * - 4
+     - Aurora4
+     - H2B
+     - 4
+   * - 5
+     - Aurora5
+     - GFP-H2B
+     - 2-uM
+   * - 6
+     - Aurora6
+     - GFP-H2B
+     - 2 uM
+   * - 7
+     - Aurora7
+     - GFP_H2B
+     - 2_uM
+   * - 8
+     - Aurora8
+     - GFP^H2B
+     - 2^uM
+   * - 9
+     - GFP
+     - ``none``
+     - ``none``
+   * - 10
+     - uM
+     - ``none``
+     - ``none``
+   * - 11
+     - H2B
+     - ``none``
+     - ``none``
+   * - 12
+     - 2
+     - ``none``
+     - ``none``
+   * - 13
+     - Aurora13
+     - H2B
+     - 2 uM
 
 Basic **Search** tab:
    - ``GFP H2B:2 uM`` finds images 1,2,3,5,6,7,8,9,10. In that case, the query is interpreted as ``GFP`` OR ``H2B:2`` OR ``uM``.
@@ -109,6 +155,9 @@ Basic **Search** tab:
    - ``GFP^H2B:2^uM`` finds images 1,2,3,5,6,7,8,9,10.
    - ``GFP`` finds images 1,2,5,6,7,8,9.
    - ``GFP`` with checkbox ``Name`` under ``Restricted by Field`` section checked finds image 9.
+   - ``uM`` with checkbox ``Name`` under ``Restricted by Field`` section checked finds image 10.
+   - ``H2B`` with checkbox ``Name`` under ``Restricted by Field`` section checked finds image 11.
+   - ``2`` with checkbox ``Name`` under ``Restricted by Field`` section checked finds image 12.
    - ``GFP*:2 uM`` throws an error. Do not use wildcards in Keys !
    - ``H2B:*`` finds images 3,4,13. The wildcard can be used in Values.
    - ``H2B:2*`` finds images 3,13. 
