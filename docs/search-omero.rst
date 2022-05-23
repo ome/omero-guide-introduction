@@ -96,7 +96,7 @@ Basic **Search** tab:
    - ``GFP H2B:2 uM`` finds images 1,2,3,5,6,7,8,9,10. This is because the query is interpreted as ``GFP`` OR ``H2B:2`` OR ``uM``.
    - ``"GFP H2B":2 uM`` throws an error. Do not use quotes around Key names!
    - ``GFP H2B:"2 uM"`` finds images 1,2,5,6,7,8,9. In that case, the query is interpreted as ``GFP`` OR ``H2B:2 uM`` which prevents finding of image 3 with Value ``2``.
-   - ``GFP^H2B:2 uM`` finds images 1,2,3,5,6,7,8,9,10. This is because the query is interpreted as ``GFP`` OR ``H2B:2`` OR ``uM``.
+   - ``GFP^H2B:2 uM`` finds images 1,2,3,5,6,7,8,9,10. In that case, the query is interpreted as ``GFP`` OR ``H2B:2`` OR ``uM``.
    - ``H2B:2`` finds image 3.
    - ``H2B:4`` finds image 4.
    - ``GFP-H2B:2 uM`` finds images 1,2,5,6,7,8,10.
