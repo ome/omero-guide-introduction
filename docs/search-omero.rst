@@ -110,7 +110,7 @@ Basic **Search** tab:
    - ``GFP`` with checkbox ``Name`` under ``Restricted by Field`` section checked finds image 9.
 
 **Advanced** tab:
-   - ``GFP^H2B:2^uM`` and ``GFP^H2B:2 uM`` throw an error in ``Advanced`` tab. This is because of the different interpretation of the ``^`` character between the basic ``Search`` and ``Advanced`` tabs.
+   - ``GFP^H2B:2^uM`` and ``GFP^H2B:2 uM`` throw an error in ``Advanced`` tab. This is due to the different interpretation of the ``^`` character between the basic ``Search`` and ``Advanced`` tabs.
    - As there is no ``Name`` checkbox in the ``Advanced`` tab, use ``name:GFP`` instead, which finds image 9.
 
 The behaviour for the rest of the query examples in ``Advanced`` tab is the same as listed above for the basic ``Search`` tab.
