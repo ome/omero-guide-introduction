@@ -72,7 +72,7 @@ Step-by-Step
     then try to replace them with underscores if you want to 
     use the Search functionality on them.
     Spaces, stars, question marks and ``^`` characters in Values 
-    are acceptable, but not preferable, see examples below.
+    are acceptable, but should be avoided if possible, see examples below.
 
 Key-Value pairs search examples
 -------------------------------
