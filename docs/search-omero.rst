@@ -48,23 +48,24 @@ Step-by-Step
 
 #.  The search results will show any objects e.g. Images or Datasets, which have anywhere the string mitomycin-A.
 
-#.  Several images should be found, from two different datasets.
+#.  Several images should be found.
 
 #.  Refine the search now for only Key-Value Pairs which have the key ``mitomycin-A`` and value ``0mM`` by entering ``mitomycin-A:0mM`` into the search box and pressing ``Enter``.
 
-#.  Now you should find only 21 images.
+#.  This should narrow down your search and find less results compared with the previous case.
 
-#.  Click on the ``Advanced search`` tab in the search results.
+#. Click on the Browse link |image2|\ in one search result line of the last image (in the right-hand part of the centre pane) to navigate back to the main webclient.
+
+Advanced search
+---------------
+
+The ``Advanced search`` in OMERO.web gives the opportunity to construct queries with Lucene syntax. These queries will be sent into the OMERO search (which is based on Lucene) unparsed. The possibilities include using logical operators (``AND``, ``OR``, ``NOT``, see workflow below) or fuzzy search (see Search Examples below).
+
+#.  Click on the ``Advanced`` tab in the search results.
 
 #. Enter ``mitomycin-A:0mM AND name:VRAQ`` which will narrow down your previous search for ``mitomycin-A:0mM`` to objects which also have ``VRAQ`` in their name.
 
-#. You should see 5 results now.
-
 #. Enter ``mitomycin-A:0mM AND NOT name:VRAQ`` which will reject all objects which have ``VRAQ`` in their name and find only the ones which are named differently.
-
-#. You should see 16 results now.
-
-#. Click on the Browse link |image2|\ in one search result line of the last image (in the right-hand part of the centre pane) to navigate back to the main webclient.
 
 .. note::
     Spaces, stars, question marks and ``^`` characters are to be avoided in the Keys.
@@ -72,10 +73,10 @@ Step-by-Step
     then try to replace them with underscores if you want to 
     use the Search functionality on them.
     Spaces, stars, question marks and ``^`` characters in Values 
-    are acceptable, but should be avoided if possible, see examples below.
+    are acceptable, but should be avoided if possible, see Search Examples below.
 
-Key-Value pairs search examples
--------------------------------
+Search examples
+---------------
 
 Considering the following setup of 13 separate images:
 
@@ -160,11 +161,13 @@ Basic **Search** tab:
    - ``2`` with checkbox ``Name`` under ``Restricted by Field`` section checked finds image 12.
    - ``GFP*:2 uM`` throws an error. Do not use wildcards in Keys!
    - ``H2B:*`` finds images 3,4,13. The wildcard can be used in Values.
-   - ``H2B:2*`` finds images 3,13. 
+   - ``H2B:2*`` finds images 3,13.
 
 **Advanced** tab:
    - ``GFP^H2B:2^uM`` and ``GFP^H2B:2 uM`` throw an error in ``Advanced`` tab. This is due to the different interpretation of the ``^`` character between the basic ``Search`` and ``Advanced`` tabs.
    - As there is no ``Name`` checkbox in the ``Advanced`` tab, use ``name:GFP`` instead, which finds image 9.
+   - ``Aurora2~0.85`` finds 1,2,3,4,5,6,7,8. The ``~`` denotes a ``fuzzy`` search, which is possible only in ``Advanced`` tab. The number behind the ``~`` indicates the precision with which the result must match the query.
+   - ``Aurora2~0.86`` finds image 2.
 
 The behaviour for the rest of the query examples in ``Advanced`` tab is the same as listed above for the basic ``Search`` tab.
 
