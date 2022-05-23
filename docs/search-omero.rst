@@ -141,7 +141,7 @@ Considering the following setup of 13 separate images:
 
 Basic **Search** tab:
    - ``GFP H2B:2 uM`` finds images 1,2,3,5,6,7,8,9,10. In that case, the query is interpreted as ``GFP`` OR ``H2B:2`` OR ``uM``.
-   - ``"GFP H2B":2 uM`` throws an error. Do not use quotes around Key names!
+   - ``"GFP H2B":2 uM`` throws an error. Do not use quotes around Keys!
    - ``GFP H2B:"2 uM"`` finds images 1,2,5,6,7,8,9. In that case, the query is interpreted as ``GFP`` OR ``H2B:2 uM`` which prevents finding of image 3 with Value ``2``.
    - ``GFP^H2B:2 uM`` finds images 1,2,3,5,6,7,8,9,10. In that case, the query is interpreted as ``GFP`` OR ``H2B:2`` OR ``uM``.
    - ``H2B:2`` finds image 3.
@@ -158,7 +158,7 @@ Basic **Search** tab:
    - ``uM`` with checkbox ``Name`` under ``Restricted by Field`` section checked finds image 10.
    - ``H2B`` with checkbox ``Name`` under ``Restricted by Field`` section checked finds image 11.
    - ``2`` with checkbox ``Name`` under ``Restricted by Field`` section checked finds image 12.
-   - ``GFP*:2 uM`` throws an error. Do not use wildcards in Keys !
+   - ``GFP*:2 uM`` throws an error. Do not use wildcards in Keys!
    - ``H2B:*`` finds images 3,4,13. The wildcard can be used in Values.
    - ``H2B:2*`` finds images 3,13. 
 
