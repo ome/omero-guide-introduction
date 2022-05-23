@@ -68,7 +68,7 @@ Step-by-Step
 
 .. note::
     Spaces, stars, question marks and ``^`` characters are to be avoided in the Keys.
-    If you already have these characters in Keys in your OMERO, 
+    If you already have these characters in Keys in your OMERO server,
     then try to replace them with underscores if you want to 
     use the Search functionality on them.
     Spaces, stars, question marks and ``^`` characters in Values 
