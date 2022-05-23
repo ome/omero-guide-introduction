@@ -77,7 +77,7 @@ Step-by-Step
 Key-Value pairs search examples
 -------------------------------
 
-Considering following setup of 12 separate images (image 1 through 12):
+Considering the following setup of 12 separate images (image 1 through 12):
 
 1. Key ``GFP H2B`` with Value ``2 uM`` on image 1
 2. Key ``GFP^H2B`` with Value ``2 uM`` on image 2
