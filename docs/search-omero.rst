@@ -71,7 +71,7 @@ Step-by-Step
     If you already have these characters in Keys in your OMERO, 
     then try to replace them with underscores if you want to 
     use the Search functionality on them.
-    Spaces stars, question marks and ``^`` characters in Values 
+    Spaces, stars, question marks and ``^`` characters in Values 
     are acceptable, but not preferable, see examples below.
 
 Key-Value pairs search examples
