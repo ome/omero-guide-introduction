@@ -61,7 +61,9 @@ Advanced search
 
 The ``Advanced search`` in OMERO.web gives the opportunity to construct queries with Lucene syntax. These queries will be sent into the OMERO search (which is based on Lucene) unparsed. The possibilities include using logical operators (``AND``, ``OR``, ``NOT``, see workflow below) or fuzzy search (see Search Examples below).
 
-#.  Click on the ``Advanced`` tab in the search results.
+#.  Still on the search results page, click on the ``Advanced`` tab in the upper part of the left-hand side pane.
+
+    |image3|
 
 #. Enter ``mitomycin-A:0mM AND name:VRAQ`` which will narrow down your previous search for ``mitomycin-A:0mM`` to objects which also have ``VRAQ`` in their name.
 
@@ -177,3 +179,5 @@ The behaviour for the rest of the query examples in ``Advanced`` tab is the same
 .. |image2| image:: images/search2.png
    :width: 0.55208in
    :height: 0.27083in
+.. |image3| image:: images/search3.png
+   :width: 3.8542in
