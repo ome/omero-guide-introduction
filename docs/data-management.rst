@@ -568,7 +568,7 @@ Previously created Shares can still be viewed in the ``Shares`` tab |image6| abo
  - You will also be sharing the data with all the other members of that group
 
 .. note::
-    Shares were never supported by OMERO.iviewer. In case OMERO.iviewer is installed on your server and is set as a default viewer, it is not possible for the users with whom the images inside a historical Share are shared to view these in a Full viewer.
+    Shares were never supported by OMERO.iviewer. If OMERO.iviewer is installed on your server and is set as a default viewer, then, for the Share participants, it is not possible to view images inside a historical Share in any Full viewer.
 
 .. |image0| image:: images/management1.png
    :height: 3.4592in
