@@ -3,28 +3,20 @@ Annotate Data and Filter using Annotations
 
 There are several ways to add annotations to objects in OMERO. Here, addition and filtering of annotations using OMERO.web is described. You can add annotations using the OMERO.web interface to any object(s) that you can select in the left-hand-side tree or central pane, this means ``Project``, ``Dataset``, ``Image``, ``Screen``, ``Plate`` and ``Well``.
 
+
 Description
 -----------
 
-We will show:
-
--  How to annotate Images, Datasets and Projects with:
-
-   -  Tags
-
-   -  Key-Value Pairs
-
-   -  File Attachments
-
-   -  Ratings
-
--  How to filter thumbnails in the central pane of OMERO.web for:
-
-   -  Tags
-
-   -  Key-Value Pairs
-
-   -  Ratings
+| We will show:
+|  How to annotate Images, Datasets and Projects with:
+|    - Tags
+|    - Key-Value Pairs
+|    - File Attachments
+|    - Ratings
+|  How to filter thumbnails in the central pane of OMERO.web for:
+|    - Tags
+|    - Key-Value Pairs
+|    - Ratings
 
 Setup
 -----
