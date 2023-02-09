@@ -7,16 +7,23 @@ There are several ways to add annotations to objects in OMERO. Here, addition an
 Description
 -----------
 
-| We will show:
-|  How to annotate Images, Datasets and Projects with:
-|    - Tags
-|    - Key-Value Pairs
-|    - File Attachments
-|    - Ratings
-|  How to filter thumbnails in the central pane of OMERO.web for:
-|    - Tags
-|    - Key-Value Pairs
-|    - Ratings
+We will show:
+  - How to annotate Images, Datasets and Projects with:
+
+     - Tags
+
+     - Key-Value Pairs
+
+     - File Attachments
+
+     - Ratings
+  - How to filter thumbnails in the central pane of OMERO.web for:
+
+     - Tags
+
+     - Key-Value Pairs
+
+     - Ratings
 
 Setup
 -----
